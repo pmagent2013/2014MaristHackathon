@@ -1,9 +1,10 @@
+<?php include_once('common.php'); ?>
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>MaristNotes</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
   </head>
@@ -19,6 +20,8 @@
       <legend>Photos</legend>
 	<input type="file" id="file" accept="image/*" name="file" multiple value="Add photos" onchange="showThumbnails()"/>
       </fieldset>
+	  
+	  
 	</form>
 	
 	<div id="preview">
