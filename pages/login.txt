@@ -6,8 +6,35 @@ document.getElementById("redirect").setAttribute("value",window.location.hash);
     <div class="row">
      <?php if (isset($_POST['error'])){echo '<div data-alert class="alert-box alert">Invalid Username or Password error: ' . $_POST['error'] . '<a href="#" class="close">&times;</a></div>';}?>
       <div class="small-12 columns text-center">
-        <div class="row"> <a href="#Home"><img src="img/logo.png"></a> </div>
-        <div class="row"> <span class="">You have found the lock... But now you need the key</span> </div>
+        <code>
+		IIIIIIIIII                         tttt                           EEEEEEEEEEEEEEEEEEEEEElllllll lllllll   iiii                                                                                                    
+I::::::::I                      ttt:::t                           E::::::::::::::::::::El:::::l l:::::l  i::::i                                                                                                   
+I::::::::I                      t:::::t                           E::::::::::::::::::::El:::::l l:::::l   iiii                                                                                                    
+II::::::II                      t:::::t                           EE::::::EEEEEEEEE::::El:::::l l:::::l                                                                                                           
+  I::::Innnn  nnnnnnnn    ttttttt:::::ttttttt                       E:::::E       EEEEEE l::::l  l::::l iiiiiii    ggggggggg   ggggg    eeeeeeeeeeee    nnnn  nnnnnnnn        cccccccccccccccc    eeeeeeeeeeee    
+  I::::In:::nn::::::::nn  t:::::::::::::::::t                       E:::::E              l::::l  l::::l i:::::i   g:::::::::ggg::::g  ee::::::::::::ee  n:::nn::::::::nn    cc:::::::::::::::c  ee::::::::::::ee  
+  I::::In::::::::::::::nn t:::::::::::::::::t                       E::::::EEEEEEEEEE    l::::l  l::::l  i::::i  g:::::::::::::::::g e::::::eeeee:::::een::::::::::::::nn  c:::::::::::::::::c e::::::eeeee:::::ee
+  I::::Inn:::::::::::::::ntttttt:::::::tttttt     ---------------   E:::::::::::::::E    l::::l  l::::l  i::::i g::::::ggggg::::::gge::::::e     e:::::enn:::::::::::::::nc:::::::cccccc:::::ce::::::e     e:::::e
+  I::::I  n:::::nnnn:::::n      t:::::t           -:::::::::::::-   E:::::::::::::::E    l::::l  l::::l  i::::i g:::::g     g:::::g e:::::::eeeee::::::e  n:::::nnnn:::::nc::::::c     ccccccce:::::::eeeee::::::e
+  I::::I  n::::n    n::::n      t:::::t           ---------------   E::::::EEEEEEEEEE    l::::l  l::::l  i::::i g:::::g     g:::::g e:::::::::::::::::e   n::::n    n::::nc:::::c             e:::::::::::::::::e 
+  I::::I  n::::n    n::::n      t:::::t                             E:::::E              l::::l  l::::l  i::::i g:::::g     g:::::g e::::::eeeeeeeeeee    n::::n    n::::nc:::::c             e::::::eeeeeeeeeee  
+  I::::I  n::::n    n::::n      t:::::t    tttttt                   E:::::E       EEEEEE l::::l  l::::l  i::::i g::::::g    g:::::g e:::::::e             n::::n    n::::nc::::::c     ccccccce:::::::e           
+II::::::IIn::::n    n::::n      t::::::tttt:::::t                 EE::::::EEEEEEEE:::::El::::::ll::::::li::::::ig:::::::ggggg:::::g e::::::::e            n::::n    n::::nc:::::::cccccc:::::ce::::::::e          
+I::::::::In::::n    n::::n      tt::::::::::::::t                 E::::::::::::::::::::El::::::ll::::::li::::::i g::::::::::::::::g  e::::::::eeeeeeee    n::::n    n::::n c:::::::::::::::::c e::::::::eeeeeeee  
+I::::::::In::::n    n::::n        tt:::::::::::tt                 E::::::::::::::::::::El::::::ll::::::li::::::i  gg::::::::::::::g   ee:::::::::::::e    n::::n    n::::n  cc:::::::::::::::c  ee:::::::::::::e  
+IIIIIIIIIInnnnnn    nnnnnn          ttttttttttt                   EEEEEEEEEEEEEEEEEEEEEElllllllllllllllliiiiiiii    gggggggg::::::g     eeeeeeeeeeeeee    nnnnnn    nnnnnn    cccccccccccccccc    eeeeeeeeeeeeee  
+                                                                                                                            g:::::g                                                                               
+                                                                                                                gggggg      g:::::g                                                                               
+                                                                                                                g:::::gg   gg:::::g                                                                               
+                                                                                                                 g::::::ggg:::::::g                                                                               
+                                                                                                                  gg:::::::::::::g                                                                                
+                                                                                                                    ggg::::::ggg                                                                                  
+                                                                                                                       gggggg      
+																													   </code>
+		
+		
+		
+        <div class="row"> <span class="">Welcome to our Int-Elligent System, Please Login below!</span> </div>
       </div>
     </div>
     <div class="row">
