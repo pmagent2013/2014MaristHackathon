@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intelligence</title>
+    <title>Int-Elligence</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
@@ -15,7 +15,7 @@
  <nav class="top-bar" data-topbar>
         <ul class="title-area">
             <li class="name">
-                <h1 style="color: blue;"><b>Int-Elligence</b></h1>
+                <h1><a href="#Home"><img src="http://i.imgur.com/ClEnz1J.png"></a></h1>
             </li>
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
