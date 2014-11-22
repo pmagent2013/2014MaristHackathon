@@ -19,7 +19,7 @@
   <div class="row">
     <div class="large-12 medium-12">
 	<h2> Please Upload your files here</h2>
-    <form name="Upload" data-abide novalidate="novalidate" method="POST" enctype="multipart/form-data" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+    <form name="Upload" data-abide novalidate="novalidate" method="POST" enctype="multipart/form-data" action="upload.php">
       <fieldset>
       <legend>Photos</legend>
 	<input type="file" id="fileToUpload" accept="image/*" name="fileToUpload" multiple value="Add photos" onchange="showThumbnails()"/>
