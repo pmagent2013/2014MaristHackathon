@@ -47,8 +47,9 @@
   </div>
 </div>
 </div>
-
-  <button class='row' type="submit">Submit</button>
+  <div class='row'>
+  <button type="submit">Submit</button>
+</div>
 </form>
   
 
