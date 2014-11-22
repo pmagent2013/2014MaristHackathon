@@ -110,6 +110,21 @@ function addOrdinalNumberSuffix($num) {
     return $num.'th';
 }
 
+
+function getBetween($content=NULL,$start=NULL,$end=NULL){
+    $r = explode($start, $content);
+    if (isset($r[1])){
+        $r = explode($end, $r[1]);
+        return $r[0];
+    }
+	if ($start==""){
+        $r = explode($end, $content);
+        return $r[0];
+    }
+    return 'Not Found';
+}
+
+
 function readImageForText($filename){
 	$url_listindexes = 'https://api.idolondemand.com/1/api/sync/ocrdocument/v1';
 	$params1 = 'url=http://hackathon.gavalchin.com/live/uploads/'.$filename.'&mode=scene_photo&apikey=8e025234-2c19-4af9-b337-40803dfdd176';
