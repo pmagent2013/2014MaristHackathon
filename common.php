@@ -40,18 +40,6 @@ function parameter($parameter, $form = '0')
 }
 
 
-function encrypt($text)
-{
-    $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
-    $iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
-    $key = "K";
-    if (strpos($_SERVER['HTTP_USER_AGENT'], 'Firefox') !== FALSE) {
-        return encodeURIComponent(rawurlencode(base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $key, "|||" . $text . "|||", MCRYPT_MODE_ECB, $iv))));
-    } else {
-        return rawurlencode(base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $key, "|||" . $text . "|||", MCRYPT_MODE_ECB, $iv)));
-    }
-}
-
 
 function websiteLastUpdated()
 {
@@ -64,14 +52,7 @@ function websiteLastUpdated()
     return timeago($filetime);
 }
 
-function decrypt($text)
-{
-    $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
-    $iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
-    $key = "K";
-    $out = trim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $key, base64_decode($text), MCRYPT_MODE_ECB, $iv));
-    return substr($out, 3, last_index_of("|||", $out) - 6);
-}
+
 
 function timeTotal($ptime)
 {
@@ -115,22 +96,6 @@ function timeago($ptime)
             return $r . ' ' . $str . ($r > 1 ? 's' : '') . ' ago';
         }
     }
-}
-
-
-function errorDisplay($errorMessage = NULL, $Severity = NULL){ 
-	//This function displays any pre-defined trace errors to be called
-	//Any other errors will be recorded in the apache logs
-	echo "<center>";
-	if($Severity == "LOW"){
-		echo "<div id='errorReport' style='color:blue;background-color:yellow;align:center;'>".$errorMessage."</div>";
-	}elseif($Severity == "MEDIUM"){
-		echo "<div id='errorReport' style='color:purple;background-color:orange;align:center;'>".$errorMessage."</div>";
-	}else{
-		echo "<div id='errorReport' style='color:black;background-color:red;align:center;'>".$errorMessage."</div>";
-	}
-	logToFile("Client '".$_SERVER['REMOTE_ADDR']."' ".$errorMessage, $Severity); //logs the error to the Errors.txt for later debugging
-	echo "<div id='errorReport'><b>This error has been logged...</b>&nbsp;&nbsp;&nbsp;<u>Sorry for the Inconvenience</u></div></center>";
 }
 
 function logToFile($msg = NULL, $Severity = NULL){ 
