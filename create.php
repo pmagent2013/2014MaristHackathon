@@ -14,7 +14,7 @@
    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
   </head>
   <body>
-    <h1>Create Account</h1>
+    <h1 class='row'>Create Account</h1>
     <form data-abide>
   <div class='row'>
   <div class="name-field">
@@ -48,7 +48,7 @@
 </div>
 </div>
 
-  <button type="submit">Submit</button>
+  <button class='row' type="submit">Submit</button>
 </form>
   
 
