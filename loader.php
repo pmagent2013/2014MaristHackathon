@@ -36,7 +36,7 @@ function caculateLoadTime2($ms){
     foreach ($a as $secs => $str) {
         $d = $ms / $secs;
         if ($d >= 1) {
-            $r = round($d);
+            $r = round($d, 2);
             return $r . '' . $str;
         }
     }
