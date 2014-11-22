@@ -17,7 +17,7 @@
  <nav class="top-bar" data-topbar>
         <ul class="title-area">
             <li class="name">
-                <h1 color="white">Int-Elligence</h1>
+                <h1 style="color: blue;"><b>Int-Elligence</b></h1>
             </li>
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
