@@ -11,6 +11,11 @@ function databaseConnect($database = "hackathon_db"){
 }
 databaseConnect();  //Make an active connection to the database
 
+//-------------- Check if $_POST variables sent ---------------------
+if(isset($_POST['upload'])){ upload(); }
+
+
+
 
 function errorDisplay($errorMessage = NULL, $Severity = NULL){ 
 	//This function displays any pre-defined trace errors to be called
@@ -104,4 +109,28 @@ function addOrdinalNumberSuffix($num) {
         }
     }
     return $num.'th';
+}
+
+
+
+
+
+// -------------------------------------------- Data Handling sections in here --------------------------------------------------------
+
+function upload(){
+	$target_dir = "uploads/";
+	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$uploadOk = 1;
+	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+	// Check if image file is a actual image or fake image
+	if(isset($_POST["submit"])) {
+		$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+		if($check !== false) {
+			echo "File is an image - " . $check["mime"] . ".";
+			$uploadOk = 1;
+		} else {
+			echo "File is not an image.";
+			$uploadOk = 0;
+		}
+	}
 }

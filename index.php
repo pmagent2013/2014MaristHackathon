@@ -22,11 +22,9 @@
     <form name="Upload" data-abide novalidate="novalidate" method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
       <fieldset>
       <legend>Photos</legend>
-	<input type="file" id="file" accept="image/*" name="file" multiple value="Add photos" onchange="showThumbnails()"/>
+	<input type="file" id="fileToUpload" accept="image/*" name="fileToUpload" multiple value="Add photos" onchange="showThumbnails()"/>
+          <button type="submit" name="upload" class="medium button green">Submit</button>
       </fieldset>
-	  <div class="large-12 columns">
-          <button type="submit" class="medium button green">Submit</button>
-        </div>
 	  
 	</form>
 	
