@@ -36,8 +36,8 @@ function caculateLoadTime2($ms){
     foreach ($a as $secs => $str) {
         $d = $ms / $secs;
         if ($d >= 1) {
-            $r = round($d, 2);
-            echo $r . '' . $str;
+            $r = round($d);
+            return $r . '' . $str;
         }
     }
 }
@@ -47,8 +47,9 @@ $mtime = explode(" ",$mtime);
 $mtime = $mtime[1] + $mtime[0]; 
 $endtime = $mtime; 
 $totaltime = ($endtime - $starttime)*1000;
+echo caculateLoadTime2(1.23213);
 
 if($totaltime > 20000) { echo "<script> alert('It appears we are under heavy load. As a result, the performance is degraded.'); </script>"; }
-echo "<script> loadtime.innerHTML = '".caculateLoadTime2($totaltime)."';  lastupdated.innerHTML = '".websiteLastUpdated()."';";
+echo "<script> loadtime.innerHTML = '".caculateLoadTime2($totaltime)."';  lastupdated.innerHTML = '".websiteLastUpdated()."'; </script>";
 
 ?>
