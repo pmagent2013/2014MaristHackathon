@@ -9,18 +9,24 @@
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
-
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Welcome to MaristNotes</h1>
+      </div>
+    </div>
 
 
   <div class="row">
     <div class="large-12 medium-12">
-
-    <form>
+	<h2> Please Upload your files here</h2>
+    <form name="Upload" data-abide novalidate="novalidate" method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
       <fieldset>
       <legend>Photos</legend>
 	<input type="file" id="file" accept="image/*" name="file" multiple value="Add photos" onchange="showThumbnails()"/>
       </fieldset>
-	  
+	  <div class="large-12 columns">
+          <button type="submit" class="medium button green">Submit</button>
+        </div>
 	  
 	</form>
 	
