@@ -22,11 +22,11 @@
         <section class="top-bar-section">
             <ul class="left">
                 <li><a href="#Home">Home</li>
-				<li class="divider">
+				<li class="divider"></li>
                 <li><a href="#RecentChanges">My Notes</li>
-				<li class="divider">
+				<li class="divider"></li>
                 <li><a href="#Statistics">Statistics</a></li>
-                <li class="divider">
+                <li class="divider"></li>
                 <!--<li><a href="#FAQ">F.A.Q.</a></li>
                 <li class="divider">
                 <li><a href="#About">About Us</a></li>
