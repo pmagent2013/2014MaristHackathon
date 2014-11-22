@@ -16,6 +16,128 @@ databaseConnect();  //Make an active connection to the database
 //-------------- Check if $_POST variables sent ---------------------
 
 
+function parameter($parameter, $form = '0')
+{
+    if ($form == 0) {
+        if (isset($_GET[$parameter])) {
+            return ($_GET[$parameter]);
+            exit;
+        }
+        if (isset($_POST[$parameter])) {
+            return ($_POST[$parameter]);
+            exit;
+        }
+        if (isset($_COOKIE[$parameter])) {
+            return ($_COOKIE[$parameter]);
+            exit;
+        }
+    } elseif ($form == 1) {
+        if (parameter($parameter) != "") {
+            return decrypt(parameter($parameter));
+        }
+    }
+    return false;
+}
+
+
+
+function websiteLastUpdated()
+{
+    $path = realpath($_SERVER['DOCUMENT_ROOT']);
+    $objects = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path), RecursiveIteratorIterator::SELF_FIRST);
+    foreach ($objects as $name => $object) {
+        $filetime[] = filemtime($name);
+    }
+    $filetime = max($filetime);
+    return timeago($filetime);
+}
+
+
+
+function timeTotal($ptime)
+{
+    $etime = $ptime;
+    if ($etime < 1) {
+        return '0 seconds';
+    }
+    $a = array( //24 * 60 * 60 * 30 *12   =>  'year',
+        //24 * 60 * 60 * 30       =>  'month',
+        24 * 60 * 60 => 'day',
+        60 * 60 => 'hour',
+        60 => 'minute',
+        1 => 'second'
+    );
+    foreach ($a as $secs => $str) {
+        $d = $etime / $secs;
+        if ($d >= 1) {
+            $r = round($d, 2);
+            return $r . ' ' . $str . ($r > 1 ? 's' : '');
+        }
+    }
+}
+
+function timeago($ptime)
+{
+    $etime = time() - $ptime;
+    if ($etime < 1) {
+        return '0 seconds';
+    }
+    $a = array(24 * 60 * 60 * 30 * 12 => 'year',
+        24 * 60 * 60 * 30 => 'month',
+        24 * 60 * 60 => 'day',
+        60 * 60 => 'hour',
+        60 => 'minute',
+        1 => 'second'
+    );
+    foreach ($a as $secs => $str) {
+        $d = $etime / $secs;
+        if ($d >= 1) {
+            $r = round($d);
+            return $r . ' ' . $str . ($r > 1 ? 's' : '') . ' ago';
+        }
+    }
+}
+
+   
+
+function websiteLastUpdated(){
+	$path = realpath($_SERVER['DOCUMENT_ROOT']);
+	$objects = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path), RecursiveIteratorIterator::SELF_FIRST);
+	foreach($objects as $name => $object){
+		$filetime[]=filemtime($name);
+	}
+	$filetime=max($filetime);
+	return lastUpdated($filetime);
+}
+
+function caculateLoadTime(){
+	global $execution_time;
+	$execution_time = microtime() - $execution_time;
+	return sprintf('Page generated in <span id="loadtime">%.5f</span>', $execution_time);
+}
+
+function lastUpdated($ptime) {
+    $etime = time() - $ptime;
+    if ($etime < 1) {
+        return '0 seconds';
+    }
+    $a = array( 12 * 30 * 24 * 60 * 60  =>  'year',
+                30 * 24 * 60 * 60       =>  'month',
+				7  * 24 * 60 * 60       =>  'week',
+                24 * 60 * 60            =>  'day',
+                60 * 60                 =>  'hour',
+                60                      =>  'minute',
+                1                       =>  'second'
+                );
+    foreach ($a as $secs => $str) {
+        $d = $etime / $secs;
+        if ($d >= 1) {
+            $r = round($d);
+            return $r . ' ' . $str . ($r > 1 ? 's' : '').' ago';
+        }
+    }
+}
+
 function addOrdinalNumberSuffix($num) {
     if (!in_array(($num % 100),array(11,12,13))){
         switch ($num % 10) {
