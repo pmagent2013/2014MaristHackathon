@@ -17,8 +17,6 @@ databaseConnect();  //Make an active connection to the database
 
 
 
-
-
 function errorDisplay($errorMessage = NULL, $Severity = NULL){ 
 	//This function displays any pre-defined trace errors to be called
 	//Any other errors will be recorded in the apache logs
