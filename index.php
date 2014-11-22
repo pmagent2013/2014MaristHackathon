@@ -9,220 +9,214 @@
     <script src="js/vendor/modernizr.js"></script>
 	<script>
 	function showThumbnails(){
- 
   var files= document.getElementById('file').files;
-  
   $('#previewPane').html('');
- 
   for(var i=0;i<files.length;i++){
- 
     var file=files[i];
- 
     var image = document.createElement("img");
-        
     $('#previewPane').append('<li id="photo' + i + '">');
-    
     $('#photo' +i).append(image);
-    
     $('#photo' +i).append('<div id="progress'+ i +'" class="progress large-12 medium-12 success round"><span class="meter" style="width: 0%"></span></div>');
-    
-
     var fileReader= new FileReader();
- 
     fileReader.onload = (function(img) { return function(e) { img.src = e.target.result; }; })(image);
- 
     fileReader.readAsDataURL(file);
-    
     uploadFile(file, i); 
   }
- 
 }
+function uploadFile(file){
+
+  var xhr = new XMLHttpRequest();
+
+  var formData = new FormData();
+
+  formData.append('file',file);
+
+  xhr.upload.addEventListener("progress", function(e) {
+
+    if (e.lengthComputable) {
+
+        var percentage = Math.round((e.loaded * 100) / e.total);
+
+        $("#progressbar").progressbar("value",percentage);
+
+                $("#percentage").html(percentage+"%");
+
+    }
+
+  }, false);
+
+                 
+
+  xhr.upload.addEventListener("loadstart", function(e){
+
+    $("#progressbar").show();
+
+    $("#percentage").show();
+
+  }, false);
+
+  
+
+  xhr.upload.addEventListener("load", function(e){
+
+    $("#progressbar").progressbar("value",100);
+
+    $("#percentage").html("100% Done");
+
+  }, false);
+
+  xhr.open("POST", "upload.php");
+
+  xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
+
+  xhr.send(formData);
+
+}
+
+function handleFile(files){
+
+  var fileReader=new FileReader();
+
+  var file=files[0];
+
+  var imageElem=document.createElement("img");
+
+  fileReader.onload = (function(img) { return function(e) { img.src = e.target.result; }; })(imageElem);
+
+  fileReader.readAsDataURL(file);
+
+  document.getElementById("images").appendChild(imageElem);
+
+  uploadFile(file);
+
+}
+
+
+
+
             
 
          </script>
+<script>
+
+  $(function() {
+
+    $("#progressbar").progressbar({
+
+      value: 0
+
+    });
+
+    var uploadLink = $("#uploadlink");
+
+    var fileSelect = $("#upload");
+
+    uploadLink.click(function(e){
+
+     e.preventDefault(); //prevent default action
+
+      if (fileSelect)
+
+        fileSelect.click();
+
+    });
+
+  });
+
+</script>
+
 		
   </head>
   <body>
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to MaristNotes</h1>
-      </div>
-    </div>
-
-
-  <div class="row">
-    <div class="large-12 medium-12">
-	<h2> Please Upload your files here</h2>
-    <form name="Upload" data-abide novalidate="novalidate" method="POST" enctype="multipart/form-data" action="upload.php">
-      <fieldset>
-      <legend>Photos</legend>
-	<input type="file" id="fileToUpload" accept="image/*" name="fileToUpload" multiple value="Add photos" onchange="showThumbnails()"/>
-          <button type="submit" name="upload" class="medium button green">Submit</button>
-      </fieldset>
-	  
-	</form>
-	
-	<div id="preview">
-	  <ul id="previewPane" class="medium-block-grid-3 large-block-grid-4">
-	  	  
-	  </ul>
-	</div>
-    </div>    
-</div>           
-
-	
-	
-	
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
-      </div>
-    </div>
     
-    <div class="row">
-      <div class="large-12 columns">
-      	<div class="panel">
-	        <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-	        <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-	        <p>Once you've exhausted the fun in this document, you should check out:</p>
-	        <div class="row">
-	        	<div class="large-4 medium-4 columns">
-	    		<p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-	    	</div>
-	        	<div class="large-4 medium-4 columns">
-	        		<p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-	        	</div>
-	        	<div class="large-4 medium-4 columns">
-	        		<p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-	        	</div>        
-					</div>
-      	</div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
+  
 
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
-        
-        <hr />
-                
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-				  <div class="row">
-				    <div class="large-12 columns">
-				      <label>Input Label</label>
-				      <input type="text" placeholder="large-12.columns" />
-				    </div>
-				  </div>
-				  <div class="row">
-				    <div class="large-4 medium-4 columns">
-				      <label>Input Label</label>
-				      <input type="text" placeholder="large-4.columns" />
-				    </div>
-				    <div class="large-4 medium-4 columns">
-				      <label>Input Label</label>
-				      <input type="text" placeholder="large-4.columns" />
-				    </div>
-				    <div class="large-4 medium-4 columns">
-				      <div class="row collapse">
-				        <label>Input Label</label>
-				        <div class="small-9 columns">
-				          <input type="text" placeholder="small-9.columns" />
-				        </div>
-				        <div class="small-3 columns">
-				          <span class="postfix">.com</span>
-				        </div>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="row">
-				    <div class="large-12 columns">
-				      <label>Select Box</label>
-				      <select>
-				        <option value="husker">Husker</option>
-				        <option value="starbuck">Starbuck</option>
-				        <option value="hotdog">Hot Dog</option>
-				        <option value="apollo">Apollo</option>
-				      </select>
-				    </div>
-				  </div>
-				  <div class="row">
-				    <div class="large-6 medium-6 columns">
-				      <label>Choose Your Favorite</label>
-				      <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-				      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-				    </div>
-				    <div class="large-6 medium-6 columns">
-				      <label>Check these out</label>
-				      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-				      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-				    </div>
-				  </div>
-				  <div class="row">
-				    <div class="large-12 columns">
-				      <label>Textarea Label</label>
-				      <textarea placeholder="small-12.columns"></textarea>
-				    </div>
-				  </div>
-				</form>
-      </div>     
+   
 
-      <div class="large-4 medium-4 columns">
-			  <h5>Try one of these buttons:</h5>
-			  <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>            
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
-				<div class="panel">
-        	<h5>So many components, girl!</h5>
-        	<p>A whole kitchen sink of goodies comes with Foundation. Checkout the docs to see them all, along with details on making them your own.</p>
-        	<a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
-        </div>
-      </div>
-    </div>
-    
-	
-	
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
+
+   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+   <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+
+   <style type="text/css">
+
+    #images img{
+
+     width:300px;
+
+     height:auto;
+
+     border:3px solid #FFFFFF;
+
+    }
+
+    #uploadlink{
+
+     display:block;
+
+     text-decoration:none;
+
+     border:none;
+
+     background:#21445B;
+
+     color:#F2F2F2;
+
+     padding:10px;
+
+     width:150px;
+
+    font-size:20px;
+
+     font-weight:bold;
+
+     text-align:center;
+
+     border-radius:15px;
+
+     box-shadow:0px 0px 5px #999999;
+
+    }
+
+    #uploadlink:active{
+
+     background:#4CB6B8;
+
+     color:#000000;
+
+    }
+
+  </style>
+
+ 
+
+ 
+
+  <div id="parent" style="width:640px;margin:auto;background:#F2F2F2;box-shadow:0px 0px 5px #888888;padding:20px;">
+
+    <form>
+
+      <a href="#" id="uploadlink">Select File</a>
+
+      <input style="display:none" type="file" id="upload" accept="image/*" onchange="handleFile(this.files)" name="file"><br>
+
+    </form>
+
+    <div id="images"></div>
+
+    <div id="progressbar" style="display:none; width:350px; margin-top:10px;"></div>
+
+    <span id="percentage" style="display:none; padding:10px; font-weight:bold; font-size:20px;"></span>
+
+  </div>
+
+ 
+
+
+
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>
