@@ -117,6 +117,7 @@ function addOrdinalNumberSuffix($num) {
 
 // -------------------------------------------- Data Handling sections in here --------------------------------------------------------
 
+function upload(){
 	$target_dir = "uploads/";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
@@ -132,5 +133,4 @@ function addOrdinalNumberSuffix($num) {
 			$uploadOk = 0;
 		}
 	}
-
-	?>
+}
