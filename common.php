@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 $execution_time = microtime();
 date_default_timezone_set("America/New_York");
 
