@@ -57,7 +57,7 @@
         </center>
     </noscript>
 </div>
-<div id="footer"> &copy;2007-<?php echo date("Y") ?> Int elligent  - All Rights Reserved | Generated In: <span id="loadtime">NULL</span> | Last Updated <span id="lastupdated">NULL</span>
+<div id="footer"> &copy;2007-<?php echo date("Y") ?> Int-elligence  - All Rights Reserved | Generated In: <span id="loadtime">NULL</span> | Last Updated <span id="lastupdated">NULL</span>
     </p>
 </div>
     <script src="js/vendor/jquery.js"></script>

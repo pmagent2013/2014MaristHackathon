@@ -62,6 +62,17 @@ function lastUpdated($ptime) {
 }
 
 
+function websiteLastUpdated(){
+	$path = realpath($_SERVER['DOCUMENT_ROOT']);
+	$objects = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path), RecursiveIteratorIterator::SELF_FIRST);
+	foreach($objects as $name => $object){
+		$filetime[]=filemtime($name);
+	}
+	$filetime=max($filetime);
+	return lastUpdated($filetime);
+}
+
+
 function addOrdinalNumberSuffix($num) {
     if (!in_array(($num % 100),array(11,12,13))){
         switch ($num % 10) {
