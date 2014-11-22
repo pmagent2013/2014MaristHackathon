@@ -10,7 +10,7 @@ RC	 7-Nov-13	Created.
 
 
 # Loads a specified or default URL.
-function load( $page = '#login', $pid = -1 )
+function load( $page = 'login.txt', $pid = -1 )
 {
   # Begin URL with protocol, domain, and current directory.
   $url = 'http://' . $_SERVER[ 'HTTP_HOST' ] . dirname( $_SERVER[ 'PHP_SELF' ] ) ;
