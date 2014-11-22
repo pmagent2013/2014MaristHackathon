@@ -37,7 +37,7 @@ function validate($username = '', $password = '')
     if(empty($username) or empty($password) )
       return -1 ;
     # Make the query
-    $query = "SELECT username, password FROM user WHERE username = '" . $username . "' and password = '" .$password ."' " ;
+    $query = "SELECT username, password FROM users WHERE username = '" . $username . "' and password = '" .$password ."' " ;
     show_query($query) ;
 
     # Execute the query
