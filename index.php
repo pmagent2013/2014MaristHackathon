@@ -27,10 +27,24 @@ function showThumbnails(){
         
     $('#previewPane').append('<li id="photo' + i + '">');
     
-    $('#photo' +i).append(image)
-	}
+    $('#photo' +i).append(image);
+    
+    $('#photo' +i).append('<div id="progress'+ i +'" class="progress large-12 medium-12 success round"><span class="meter" style="width: 0%"></span></div>');
+    
+
+    var fileReader= new FileReader();
+ 
+    fileReader.onload = (function(img) { return function(e) { img.src = e.target.result; }; })(image);
+ 
+    fileReader.readAsDataURL(file);
+    
+    uploadFile(file, i); 
+  }
+ 
 }
-	
+
+
+
 function uploadFile(file, i){ 
   var xhr = new XMLHttpRequest(); 
   var formData = new FormData();
@@ -56,26 +70,7 @@ function uploadFile(file, i){
  
   xhr.send(formData);
  
-};
-    
-    $('#photo' +i).append('<div id="progress'+ i +'" class="progress large-12 medium-12 success round"><span class="meter" style="width: 0%"></span></div>');
-    
-
-    var fileReader= new FileReader();
- 
-    fileReader.onload = (function(img) { return function(e) { img.src = e.target.result; }; })(image);
- 
-    fileReader.readAsDataURL(file);
-    
-    uploadFile(file, i); 
-  }
- 
 }
-
-
-
-	
-	
 	</script>
 	
 	
