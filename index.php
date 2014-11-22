@@ -169,7 +169,7 @@ function handleFile(files){
 
       <a href="#" id="uploadlink">Select File</a>
 
-      <input type="file" id="upload" accept="image/*" onchange="handleFile(this.files)" name="file"><br>
+      <input type="file" id="upload" accept="image/*" multiple onchange="handleFile(this.files)" name="file"><br>
 
     </form>
 
