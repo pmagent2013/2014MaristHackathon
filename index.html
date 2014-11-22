@@ -8,7 +8,30 @@
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
-    
+
+
+
+  <div class="row">
+    <div class="large-12 medium-12">
+
+    <form>
+      <fieldset>
+      <legend>Photos</legend>
+	<input type="file" id="file" accept="image/*" name="file" multiple value="Add photos" disabled onchange="showThumbnails()"/>
+      </fieldset>
+	</form>
+	
+	<div id="preview">
+	  <ul id="previewPane" class="medium-block-grid-3 large-block-grid-4">
+	  	  
+	  </ul>
+	</div>
+    </div>    
+</div>           
+
+	
+	
+	
     <div class="row">
       <div class="large-12 columns">
         <h1>Welcome to Foundation</h1>
@@ -157,6 +180,8 @@
       </div>
     </div>
     
+	
+	
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>
