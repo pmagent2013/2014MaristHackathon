@@ -15,7 +15,7 @@
   </head>
   <body>
     <h1 class='row'>Login</h1>
-    <form data-abide>
+  <form data-abide>
   <div class='row'>
   <div class="name-field">
     <div class='large-4 columns'>
@@ -42,7 +42,7 @@
 </div>
 </form>
   
-  <div><small><a href='create.php'> Need an Account?</a></small></div>
+  <div class='row'><small><a href='create.php'> Need an Account?</a></small></div>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
