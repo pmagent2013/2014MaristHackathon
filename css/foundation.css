@@ -38,6 +38,17 @@ html,
 body {
   font-size: 100%; }
 
+  
+  #footer{
+    	height: 50px;
+    	bottom: 0px;
+    	left: 0px;
+    	line-height: 50px;
+    	color: #aaa;
+    	text-align: center;
+    	width: 100%;
+    }
+	
 body {
   background: white;
   color: #222222;

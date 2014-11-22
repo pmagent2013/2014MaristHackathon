@@ -19,14 +19,14 @@ $page = parameter('page');
 	}
 /*} else {
 	//not logged in
-	if($page == "SignUp" || $page == "ForgotPass"){
+	if($page == "login" || $page == "create"){
 		//allow other pages while not logged in
 		if(file_exists('pages/'.$page.'.php')){
 			include('pages/'.$page.'.php');
 		}
 	}else{
 		//force login page
-			include('pages/Login.php');
+			include('pages/create.txt');
 	}
 }*/
 
