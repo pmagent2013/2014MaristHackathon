@@ -60,7 +60,7 @@ function uploadFile(file, i){
  
   xhr.upload.addEventListener("load", function(e){
  
-    $("#progress" + i).html('<span class="meter" style="width: 100%">Complete</span>');;
+    $("#progress" + i).html('<span class="meter" style="width: 100%"><center>Complete</center></span>');;
  
   }, false);
  
