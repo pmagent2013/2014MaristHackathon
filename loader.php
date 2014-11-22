@@ -47,7 +47,6 @@ $mtime = explode(" ",$mtime);
 $mtime = $mtime[1] + $mtime[0]; 
 $endtime = $mtime; 
 $totaltime = ($endtime - $starttime)*1000;
-echo caculateLoadTime2(1.23213);
 
 if($totaltime > 20000) { echo "<script> alert('It appears we are under heavy load. As a result, the performance is degraded.'); </script>"; }
 echo "<script> loadtime.innerHTML = '".caculateLoadTime2($totaltime)."';  lastupdated.innerHTML = '".websiteLastUpdated()."'; </script>";
