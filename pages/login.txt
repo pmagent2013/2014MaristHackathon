@@ -27,7 +27,7 @@ if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
       echo '<P style=color:red>Login failed please try again.</P>' ;
 
     else
-      load('', $pid);
+      load('#home', $pid);
 
 }
 ?>

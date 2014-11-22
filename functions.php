@@ -7,7 +7,7 @@ RC	 7-Nov-13	Created.
 -->
 <?php
 # Includes these helper functions
-require( 'includes/helpers.php' ) ;
+
 
 # Loads a specified or default URL.
 function load( $page = 'login.txt', $pid = -1 )
