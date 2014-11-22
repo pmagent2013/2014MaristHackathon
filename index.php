@@ -1,4 +1,4 @@
-<?php include_once('common.php'); ?>
+<?php //include_once('common.php'); ?>
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
