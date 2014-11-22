@@ -23,7 +23,8 @@
     </label>
     <small class="error">Name is required and must be a string.</small>
   </div>
-</div>
+  </div>
+<br>
 
   <div class="password-field">
     <div class='large-4 columns'>
@@ -33,6 +34,8 @@
     <small class="error">Password is required and must be a string.</small>
   </div>
   </div>
+<br>
+
   <div class="email-field">
     <div class='large-4 columns'>
     <label>Email <small>required</small>
