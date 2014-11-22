@@ -14,77 +14,100 @@
    <script src="js/ajax.js"></script>
    </head>
    <body>
-   <nav class="top-bar" data-topbar="" role="navigation">
-  <!-- Title -->
-  <ul class="title-area">
-    <li class="name"><h1><a href="#">Sexy Top Bar</a></h1></li>
-
-    <!-- Mobile Menu Toggle -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
-
-  <!-- Top Bar Section -->
-  
-<section class="top-bar-section">
-
-    <!-- Top Bar Left Nav Elements -->
-    <ul class="left">
-
-      <!-- Search | has-form wrapper -->
-      <li class="has-form">
-        <div class="row collapse">
-          <div class="large-8 small-9 columns">
-            <input type="text" placeholder="Find Stuff">
-          </div>
-          <div class="large-4 small-3 columns">
-            <a href="#" class="alert button expand">Search</a>
-          </div>
-        </div>
-      </li>
-      <li class="has-form">
-        <a class="button">Test</a>
-      </li>
-    </ul>
-
-    <!-- Top Bar Right Nav Elements -->
-    <ul class="right">
-      <!-- Divider -->
-      <li class="divider"></li>
-
-      <!-- Dropdown -->
-      <li class="has-dropdown not-click"><a href="#">Item 1</a>
-        <ul class="dropdown"><li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li><li class="parent-link show-for-small"><a class="parent-link js-generated" href="#">Item 1</a></li>
-          <li><label>Level One</label></li>
-          <li><a href="#">Sub-item 1</a></li>
-          <li><a href="#">Sub-item 2</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Sub-item 3</a></li>
-          <li class="has-dropdown not-click"><a href="#">Sub-item 4</a>
-
-            <!-- Nested Dropdown -->
-            <ul class="dropdown"><li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li><li class="parent-link show-for-small"><a class="parent-link js-generated" href="#">Sub-item 4</a></li>
-              <li><label>Level Two</label></li>
-              <li><a href="#">Sub-item 2</a></li>
-              <li><a href="#">Sub-item 3</a></li>
-              <li><a href="#">Sub-item 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Sub-item 5</a></li>
+ <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="#Home"><img src="img/NavLogo2.png"></a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
-      </li>
+        <section class="top-bar-section">
+            <ul class="left">
+                <li><a href="#Home"><img src="img/home.png"><a></li>
+                <li><a href="#RecentChanges"><img src="img/recent.png"></a></li>
+                <li>
+                <li class="has-dropdown not-click"><a><img src="img/media.png"></a>
+                    <ul class="dropdown dropdown-wrapper">
+                        <li>
+                            <div>
+                                <div class="small-6 columns">
+                                    <ul>
+                                        <li>
+                                            <h3>Movies</h3>
+                                        </li>
+                                        <li class="active"><a href="#Movies&type=Recent">Recently Updated</a></li>
+                                        <!--<li><a href="#Movies&type=Requested">Requested</a></li>-->
+                                        <li class=""><a href="#Movies&type=MostViewed">Most Viewed Movies</a></li>
+                                        <li><a href="#Movies">All Movies →</a></li>
+                                    </ul>
+                                </div>
+                                <div class="small-6 columns">
+                                    <ul>
+                                        <li>
+                                            <h3>TV-Shows</h3>
+                                        </li>
+                                        <li class="active"><a href="#TV-Shows&type=Recent">Recently Updated</a></li>
+                                        <!--<li><a href="#TV-Shows&type=Requested">Requested</a></li>-->
+                                        <li class=""><a href="#TV-Shows&type=MostViewed">Most Viewed TV-Shows</a></li>
+                                        <li><a href="#TV-Shows">All TV-Shows →</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!--<li><a href="#Statistics">Statistics</a></li>
+                <li class="divider">
+                <li><a href="#FAQ">F.A.Q.</a></li>
+                <li class="divider">
+                <li><a href="#About">About Us</a></li>
+                <li class="divider">-->
+                <li><a href="#Requests"><img src="img/requests.png"></a></li>
+                <li class="has-form hide-for-touch">
+                    <input type="text" placeholder="Search Media" onkeyup="window.history.pushState('', 'Location', '#Search&query='+ this.value)">
+              </li>
 
-      <li class="divider"></li>
 
-      <!-- Anchor -->
-      <li><a href="#">Generic Button</a></li>
-      <li class="divider"></li>
 
-      <!-- Button -->
-      <li class="has-form show-for-large-up">
-        <a href="http://foundation.zurb.com/docs" class="button">Get Lucky</a>
-      </li>
-    </ul>
-  </section></nav>
+            </ul>
+            <ul class="right">
+            <!-- ADMIN BAR -->
+                
+                <li class="has-dropdown not-click"><a href="#"><img src="img/admin.png"></a>
+                    <ul class="dropdown">
+                        <li class="has-dropdown not-click">
+                            <a href="">Keys</a>
+                            <ul class="dropdown">
+                                <li><a href="#CreateKey">Create</a></li>
+                                <li><a href="#LookupKey">Lookup</a></li>
+                                <li><a href="#GlobalKeys">Global</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown not-click">
+                            <a href="">View</a>
+                            <ul class="dropdown">
+                                <li><a href="#ViewUsers">Users</a></li>
+                                <li><a href="#ViewRequests">Requests</a></li>
+                                <li><a href="#ViewReports">Reports</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#CreateNews">Create News</a></li>
+                    </ul>
+                <li>
+
+                    <!--<li class="active"><a href="#ServerStatus">7/7 Online</a></li>-->
+                <li class=""><a href="#Report"><img src="img/report.png"></a></li>
+                <li class="has-dropdown not-click"> <a><img src="img/settings.png"></a>
+                    <ul class="dropdown">
+                        <li><a href="">Your Account</a></li>
+                        <!--<li><a href="#ReffererCode">Refferer Code</a></li>
+                        <li><a href="#Contact">Contact Us</a></li>-->
+                        <li><a href="#Logout">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </nav>
 <div id="pageContent">
     <noscript>
         <center>
