@@ -98,34 +98,7 @@ function timeago($ptime)
     }
 }
 
-function logToFile($msg = NULL, $Severity = NULL){ 
-   		$fd = fopen("Error.txt", "a");
-   		$str = "[".date("Y/m/d h:i:s", time())."] (".$Severity.") ".$msg; 
-		fwrite($fd, $str . "\n");
-   		fclose($fd);
-   }
    
-function displayIcon($icon = NULL){
-	$filename = "imgs/icons/".$icon.".png";
-	if (file_exists($filename)) {
-		echo "<img src='".$filename."' border='0' style='display:inline-block;' />";
-	}else{
-		errorDisplay("'".$icon."' ICON DOES NOT EXIST IN '".getcwd()."(".$filename.")' ", "LOW");
-	}
-   }
-   
-   
-function debug($var = false) {
-  echo "\n<pre style=\"background: #FFFF99; font-size: 10px;\">\n";
-  $var = print_r($var, true);
-  echo $var . "\n</pre>\n";
-}
-
-function multiexplode ($delimiters,$string){
-    $ready = str_replace($delimiters, $delimiters[0], $string);
-    $launch = explode($delimiters[0], $ready);
-    return  $launch;
-}
 
 function websiteLastUpdated(){
 	$path = realpath($_SERVER['DOCUMENT_ROOT']);
