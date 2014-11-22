@@ -102,7 +102,7 @@ function handleFile(files){
             
 
   $(function() {
-    $("#progressbar").progressbar({ value: 0});
+    $("#progressbar").progressbar({ value: 0; });
 
     var uploadLink = $("#uploadlink");
 
