@@ -7,6 +7,40 @@
     <title>MaristNotes</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
+	<script>
+	function showThumbnails(){
+ 
+  var files= document.getElementById('file').files;
+  
+  $('#previewPane').html('');
+ 
+  for(var i=0;i<files.length;i++){
+ 
+    var file=files[i];
+ 
+    var image = document.createElement("img");
+        
+    $('#previewPane').append('<li id="photo' + i + '">');
+    
+    $('#photo' +i).append(image);
+    
+    $('#photo' +i).append('<div id="progress'+ i +'" class="progress large-12 medium-12 success round"><span class="meter" style="width: 0%"></span></div>');
+    
+
+    var fileReader= new FileReader();
+ 
+    fileReader.onload = (function(img) { return function(e) { img.src = e.target.result; }; })(image);
+ 
+    fileReader.readAsDataURL(file);
+    
+    uploadFile(file, i); 
+  }
+ 
+}
+            
+
+         </script>
+		
   </head>
   <body>
     <div class="row">
