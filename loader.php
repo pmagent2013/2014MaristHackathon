@@ -1,12 +1,9 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-$mtime = microtime(); 
+$mtime = microtime();
 $mtime = explode(" ",$mtime); 
 $mtime = $mtime[1] + $mtime[0]; 
 $starttime = $mtime;
 include_once('common.php');
-
 session_start();
 
     //die("<center><h1>Scheduled Maintenance. We are working to improve our backend!</h1></center>");
@@ -50,6 +47,7 @@ $mtime = explode(" ",$mtime);
 $mtime = $mtime[1] + $mtime[0]; 
 $endtime = $mtime; 
 $totaltime = ($endtime - $starttime)*1000;
+echo $totaltime;
 
 if($totaltime > 20000) { echo "<script> alert('It appears we are under heavy load. As a result, the performance is degraded.'); </script>"; }
 echo "<script> loadtime.innerHTML = '".caculateLoadTime2($totaltime)."';  lastupdated.innerHTML = '".websiteLastUpdated()."';";
