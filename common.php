@@ -85,6 +85,28 @@ function addOrdinalNumberSuffix($num) {
     return $num.'th';
 }
 
+function timeTotal($ptime)
+{
+    $etime = $ptime;
+    if ($etime < 1) {
+        return '0 seconds';
+    }
+    $a = array( //24 * 60 * 60 * 30 *12   =>  'year',
+        //24 * 60 * 60 * 30       =>  'month',
+        24 * 60 * 60 => 'day',
+        60 * 60 => 'hour',
+        60 => 'minute',
+        1 => 'second'
+    );
+    foreach ($a as $secs => $str) {
+        $d = $etime / $secs;
+        if ($d >= 1) {
+            $r = round($d, 2);
+            return $r . ' ' . $str . ($r > 1 ? 's' : '');
+        }
+    }
+}
+
 
 function getBetween($content=NULL,$start=NULL,$end=NULL){
     $r = explode($start, $content);
