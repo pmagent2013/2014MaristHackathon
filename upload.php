@@ -6,5 +6,5 @@ if(isset($_FILES['file'])) {
     }
 }
 $imageText = readImageForText($_FILES['file']['name']);
-file_put_contents('uploads/'.$_FILES['file']['name'].'.txt', $imageText);
+file_put_contents('uploads/'.substr($_FILES['file']['name'], 0, -4).'.txt', $imageText);
 ?>
