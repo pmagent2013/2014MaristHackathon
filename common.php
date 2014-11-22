@@ -61,12 +61,6 @@ function lastUpdated($ptime) {
     }
 }
 
-function caculateLoadTime(){
-	global $execution_time;
-	$execution_time = microtime() - $execution_time;
-	return sprintf('Page generated in <span id="loadtime">%.5f</span>', $execution_time);
-}
-
 function websiteLastUpdated(){
 	$path = realpath($_SERVER['DOCUMENT_ROOT']);
 	$objects = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path), RecursiveIteratorIterator::SELF_FIRST);
