@@ -59,15 +59,12 @@ function uploadFile(file, i){
   }, false);
  
   xhr.upload.addEventListener("load", function(e){
- 
     $("#progress" + i).html('<span class="meter" style="width: 100%"><center>Complete</center></span>');;
  
   }, false);
  
   xhr.open("POST", "upload.php"); 
- 
   xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
- 
   xhr.send(formData);
  
 }
