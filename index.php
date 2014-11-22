@@ -22,23 +22,23 @@
         <section class="top-bar-section">
             <ul class="left">
                 <li><a href="#Home">Home</li>
-                <li><a href="#RecentChanges">My Notes</li>
-                <li><a href="#Statistics">Statistics</a></li>
+                <li><a href="#MyNotes">My Notes</li>
                 <!--<li><a href="#FAQ">F.A.Q.</a></li>
                 <li class="divider">
                 <li><a href="#About">About Us</a></li>
                 <li class="divider">-->
-                <li><a href="#Requests">Uncategorised Notes</li>
+                <li><a href="#IdentifyNotes">Uncategorised Notes</li>
                 <li class="has-form hide-for-touch">
                     <input type="text" placeholder="Search For Notes" onkeyup="window.history.pushState('', 'Location', '#Search&query='+ this.value)">
               </li>
             </ul>
             <ul class="right">
                     <!--<li class="active"><a href="#ServerStatus">7/7 Online</a></li>-->
+				<li><a href="#Statistics">Statistics</a></li>
                 <li class=""><a href="#Report">Report An Issue</li>
                 <li class="has-dropdown not-click">My Account</a>
                     <ul class="dropdown">
-                        <li><a href="">Your Account</a></li>
+                        <li><a href="#MyAccount">Your Account</a></li>
                         <!--<li><a href="#ReffererCode">Refferer Code</a></li>
                         <li><a href="#Contact">Contact Us</a></li>-->
                         <li><a href="#Logout">Logout</a></li>

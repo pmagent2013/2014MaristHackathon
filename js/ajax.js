@@ -7,7 +7,7 @@ $(document).ready(function(){
     });
     default_content = $('#pageContent').html();
     setInterval("keepSessionAlive()",60000);
-    setInterval("checkURL()",5);
+    setInterval("checkURL()",250);
 });
 var lasturl="";
 function checkURL(hash)
@@ -66,13 +66,5 @@ function keepSessionAlive(){
 		});
 	}else{
 		// its been 12 hours, we're going to let the session die on its own
-	}
-}
-
-function checkPlayerControlBar(){
-	if(document.getElementById("KFS-video-id0_controls").style['cssText'] == 'display: block;'){
-		document.getElementById("KFS-video-id0").style.cursor="default";
-	}else{
-		document.getElementById("KFS-video-id0").style.cursor="none";
 	}
 }
