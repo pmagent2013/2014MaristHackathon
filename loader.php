@@ -12,8 +12,8 @@ if(!parameter('page')) die("Error: page id not specified...Something Broke");
 
 $page = parameter('page');
 //if(($_SESSION['authorized'] == TRUE)){
-	if(file_exists('pages/'.$page.'.php')){
-		include('pages/'.$page.'.php');
+	if(file_exists('pages/'.$page.'.txt')){
+		include('pages/'.$page.'.txt');
 	}else{
 		echo '<div id="error" style="margin-top:20px;border:1px dashed #cccccc;padding:10px;-moz-border-radius: 5px;-khtml-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;color: red;font-family: LeagueGothicRegular;font-size: 24px;font-weight: lighter;text-align: center;">Aw, snap! Something went terribly wrong.<br>We couldnt find the page youre looking for.<br /><br /><iframe allowfullscreen="" style="height: 216px;width: 384px;" frameborder="0" src="//www.youtube.com/embed/t3otBjVZzT0?autohide=1&amp;autoplay=1&amp;color=white&amp;showinfo=0&amp;theme=light"></iframe></div>';
 	}
