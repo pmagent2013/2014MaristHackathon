@@ -16,6 +16,7 @@
   <body>
     <h1>Create Account</h1>
     <form data-abide>
+  <div class='row'>
   <div class="name-field">
     <div class='large-4 columns'>
     <label>Username <small>required</small>
@@ -24,8 +25,8 @@
     <small class="error">Name is required and must be a string.</small>
   </div>
   </div>
-<br>
-
+</div>
+  <div   class='row'>
   <div class="password-field">
     <div class='large-4 columns'>
     <label>Password <small>required</small>
@@ -34,8 +35,9 @@
     <small class="error">Password is required and must be a string.</small>
   </div>
   </div>
-<br>
+</div>
 
+<div class='row'>
   <div class="email-field">
     <div class='large-4 columns'>
     <label>Email <small>required</small>
@@ -44,6 +46,8 @@
     <small class="error">An email address is required.</small>
   </div>
 </div>
+</div>
+
   <button type="submit">Submit</button>
 </form>
   
