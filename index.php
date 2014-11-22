@@ -78,7 +78,7 @@ function uploadFile(file, i){
     <form>
       <fieldset>
       <legend>Photos</legend>
-	<input type="file" id="file" accept="image/*" name="file" value="Upload a Image" class="button" onchange="showThumbnails()"/>
+	<input type="file" id="file" accept="image/*" name="file" value="Upload a Image" class="button" multiple onchange="showThumbnails()"/>
       </fieldset>
 	</form>
 	
