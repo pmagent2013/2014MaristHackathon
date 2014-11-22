@@ -7,7 +7,7 @@ $(document).ready(function(){
     });
     default_content = $('#pageContent').html();
     setInterval("keepSessionAlive()",60000);
-    setInterval("checkURL()",250);
+    setInterval("checkURL()",5);
 });
 var lasturl="";
 function checkURL(hash)
