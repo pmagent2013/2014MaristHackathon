@@ -101,24 +101,7 @@ function handleFile(files){
 
             
 
-  $(function() {
-    $("#progressbar").progressbar({ value: 0; });
-
-    var uploadLink = $("#uploadlink");
-
-    var fileSelect = $("#upload");
-
-    uploadLink.click(function(e){
-
-     e.preventDefault(); //prevent default action
-
-      if (fileSelect)
-
-        fileSelect.click();
-
-    });
-
-  });
+  
 
 </script>
 
