@@ -17,24 +17,30 @@
     <h1>Create Account</h1>
     <form data-abide>
   <div class="name-field">
+    <div class='large-4 columns'>
     <label>Username <small>required</small>
       <input type="text" required pattern="[a-zA-Z]+">
     </label>
     <small class="error">Name is required and must be a string.</small>
   </div>
+</div>
 
   <div class="password-field">
+    <div class='large-4 columns'>
     <label>Password <small>required</small>
       <input type="password" required pattern="[a-zA-Z]+">
     </label>
     <small class="error">Password is required and must be a string.</small>
   </div>
+  </div>
   <div class="email-field">
+    <div class='large-4 columns'>
     <label>Email <small>required</small>
       <input type="email" required>
     </label>
     <small class="error">An email address is required.</small>
   </div>
+</div>
   <button type="submit">Submit</button>
 </form>
   
