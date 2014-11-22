@@ -59,7 +59,7 @@ function uploadFile(file, i){
   }, false);
  
   xhr.upload.addEventListener("load", function(e){
-    $("#progress" + i).html('<span class="meter" style="width: 100%"><center>Complete</center></span>');;
+    $("#progress" + i).html('<span class="meter" style="width: 100%"><center>Upload Complete!</center></span>');;
  
   }, false);
  
@@ -70,15 +70,13 @@ function uploadFile(file, i){
 }
 	</script>
 	
-	
-	
 	  <div class="row">
     <div class="large-12 medium-12">
 
     <form>
       <fieldset>
       <legend>Photos</legend>
-	<input type="file" id="file" accept="image/*" name="file" value="Upload a Image" class="button" multiple onchange="showThumbnails()"/>
+	<input type="file" id="file" accept="image/*" name="file" value="Upload a Image" class="button" onchange="showThumbnails()"/>
       </fieldset>
 	</form>
 	

@@ -1,9 +1,10 @@
 <?php
-sleep(10);
+include_once('common.php');
+
 if(isset($_FILES['file'])) {
-    if(move_uploaded_file($_FILES['file']['tmp_name'], "uploads/" . $_FILES['file']['name'])){
-                echo "success";
-               exit;
+    if(move_uploaded_file($_FILES['file']['tmp_name'], "uploads/" . $_FILES['file']['name'])){		
     }
 }
+$imageText = readImageForText($_FILES['file']['name']);
+file_put_contents($_FILES['file']['name'].'.txt', $imageText);
 ?>
