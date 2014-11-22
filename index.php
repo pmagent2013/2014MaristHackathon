@@ -78,7 +78,6 @@ function showThumbnails(){
 	
 	  <div class="row">
     <div class="large-12 medium-12">
-
     <form>
       <fieldset>
       <legend>Photos</legend>
