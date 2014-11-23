@@ -24,7 +24,7 @@
 ?>
 					
 <div class="row">
-  <form name="SignUp" data-abide novalidate="novalidate" method="POST" action="index.php#SignUp">
+  <form name="SignUp" data-abide novalidate="novalidate" method="POST" action="index.php#create">
     <fieldset>
       <legend>Account Details</legend>
       <div class="row">

@@ -3,7 +3,6 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 $execution_time = microtime();
 date_default_timezone_set("America/New_York");
-include_once('functions.php');
 
 function databaseConnect($database = "hackathon_db"){
 	$con = mysql_connect("localhost","hackathon","intelligent");
@@ -13,6 +12,7 @@ function databaseConnect($database = "hackathon_db"){
 	mysql_select_db($database, $con);
 }
 databaseConnect();  //Make an active connection to the database
+include_once('functions.php');
 
 //-------------- Check if $_POST variables sent ---------------------
 

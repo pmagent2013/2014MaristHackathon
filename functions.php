@@ -1,58 +1,24 @@
-<!--
-This file contains PHP login helper functions.
-For Use in Hackathon.
-History:
-Who	Date		Comment
-RC	 7-Nov-13	Created.
--->
-<?php
-# Includes these helper functions
-
-
-# Loads a specified or default URL.
-function load( $page = 'login.txt', $pid = -1 )
-{
-  # Begin URL with protocol, domain, and current directory.
-  $url = 'http://' . $_SERVER[ 'HTTP_HOST' ] . dirname( $_SERVER[ 'PHP_SELF' ] ) ;
-
-  # Remove trailing slashes then append page name to URL and the print id.
-  $url = rtrim( $url, '/\\' ) ;
-  $url .= '/' . $page . '?id=' . $pid;
-
-  # Execute redirect then quit.
-  session_start( );
-
-  header( "Location: $url" ) ;
-
-  exit() ;
+<?php 
+if(!$_SESSION['logged_in']){
+   if(mysql_result(mysql_query("SELECT `password` FROM `sites` WHERE `realm` = '".$realm."'"), 0, 'password') == ""){
+	   setPass();
+	   exit();
+   }
+   if (isset($_POST['Log In'])){ // if login form submitted
+      $pass = isset($_POST['pass']) ? $_POST['pass'] : ''; //sets password variable
+      
+	  $Password = mysql_result(mysql_query("SELECT `password` FROM `sites` WHERE `realm` = '".$realm."'"), 0, 'password');
+      if (md5($pass) != $Password) { //error, wrong password
+         header('Location: index.php/#login&error=Wrong+Password');
+         exit();     
+      }
+	  $_SESSION['authorized']=TRUE;
+	  header('Location: index.php');
+	  exit;
+   } else { //
+      showForm();
+      exit();
+   }
 }
 
-# Validates the print name.
-# Returns -1 if validate fails, and >= 0 if it succeeds
-# which is the primary key id.
-function validate($username = '', $password = '')
-{
-    global $dbc;
-
-    if(empty($username) or empty($password) )
-      return -1 ;
-    # Make the query
-    $query = "SELECT username, password FROM users WHERE username = '" . $username . "' and password = '" .$password ."' " ;
-    show_query($query) ;
-
-    # Execute the query
-    $results = mysqli_query( $dbc, $query ) ;
-    check_results($results);
-
-    # If we get no rows, the login failed
-    if (mysqli_num_rows( $results ) == 0 )
-      return -1 ;
-
-    # We have at least one row, so get the frist one and return it
-    $row = mysqli_fetch_array($results, MYSQLI_ASSOC) ;
-
-    $pid = $row [ 'id' ] ;
-
-    return intval($pid) ;
-}
 ?>
