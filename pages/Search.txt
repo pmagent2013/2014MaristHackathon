@@ -1,6 +1,6 @@
 <?php
 function note($query){
-	$query = mysql_query("SELECT DISTINCT name, tag, fid FROM files, fileTags WHERE tag LIKE '%$query%' AND files.fid = fileTags.fid AND uid = '".$_SESSION['uid']."' GROUP BY name LIMIT 100");
+	$query = mysql_query("SELECT DISTINCT files.name, fileTags.tag, files.fid FROM files, fileTags WHERE tag LIKE '%$query%' AND files.fid = fileTags.fid AND uid = '".$_SESSION['uid']."' GROUP BY name LIMIT 100");
 	$counter = 0;
     while($row = mysql_fetch_array($query)){
 		echo '<li style="padding:5px;">
