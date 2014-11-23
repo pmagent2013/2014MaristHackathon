@@ -3,7 +3,7 @@
 	<?php
 	$query = mysql_query("SELECT * FROM `files` WHERE `uid` = '".$_SESSION['uid']."'");
 	while($row = mysql_fetch_array($query)){
-		echo '<a href="#Note&id='.$row['fid'].'"><div class="row text-center">
+		echo '<a href="#Note&id='.$row['fid'].'"><div class="row text-center" style="max-width: 225px;">
 	<div class="row">Class ID</div>
 		<div class="row">
 			<img style="max-height: 100px;" src="uploads/'.$row['name'].'">
