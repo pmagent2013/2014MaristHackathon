@@ -8,9 +8,11 @@ $query = mysql_query("SELECT cid, fid FROM `classFiles` group by cid");
 
 
 ?>
-<ul class="small-block-grid-2 large-block-grid-4">
-  <li><img class="th" src="uploads/Logo_drakejosh.png"></li>
-  <li><img class="th" src="uploads/Logo_drakejosh.png"></li>
-  <li><img class="th" src="uploads/Logo_drakejosh.png"></li>
-  <li><img class="th" src="uploads/Logo_drakejosh.png"></li>
-</ul>
+<div class="row">
+	<ul class="small-block-grid-2 large-block-grid-4">
+	  <li><img class="th" src="uploads/Logo_drakejosh.png"></li>
+	  <li><img class="th" src="uploads/Logo_drakejosh.png"></li>
+	  <li><img class="th" src="uploads/Logo_drakejosh.png"></li>
+	  <li><img class="th" src="uploads/Logo_drakejosh.png"></li>
+	</ul>
+</div>
