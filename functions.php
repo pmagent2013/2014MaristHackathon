@@ -11,9 +11,6 @@ if(!$_SESSION['authorized']){
 	  $_SESSION['authorized']=TRUE;
 	  header('Location: index.php');
 	  exit;
-   } else { //
-      showForm();
-      exit();
    }
 }
 
