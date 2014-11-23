@@ -19,7 +19,8 @@
 						</div>
 					</a>
 				</li>';
-			}	
+			}
+		echo "<hr>";
 	}
 	echo "</ul></div>";
 ?>
