@@ -17,5 +17,5 @@
  
 	// Destroy session 
 	session_destroy();
-	echo '<script type="text/javascript">location.replace("http://hackathon.gavalchin.com/live/");</script>';
+	echo '<script type="text/javascript">location.replace("http://hackathon.gavalchin.com/live/#login");</script>';
 ?>
