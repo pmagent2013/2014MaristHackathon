@@ -6,7 +6,7 @@
 		echo '<a href="#Note&id='.$row['fid'].'"><div class="row text-center">
 	<div class="row">Class ID</div>
 		<div class="row">
-			<img src="uploads/'.$row['name'].'">
+			<img style="max-height: 100px;" src="uploads/'.$row['name'].'">
 		</div>
 	</div>
 </a>';
