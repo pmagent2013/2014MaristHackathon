@@ -1,6 +1,21 @@
-<div class="row centered-text">
-	<div class="large-12 columns">
-		<center><h2>Responsive design gets a whole lot faster for users.</h2></center>
-		<h4 class="subheader">It's now crazy fast for designers and engineers to code and learn too.</h4>
-	</div>
+<h2>Welcome Int-Elligence, the future of notetaking!</h2>
+<div class="large-12 columns">
+			<div class="panel">
+				<h2>Int-Elligent Notes system for Marist College Students</h2>
+				<p>This system is intended to allow easy accessibility and storage of notes. We use the advanced API named 'IDOL OnDemand' to process the content pushed to our service. </p>
+			</div>
 </div>
+<div class="row">
+	<h2>How the system works - 4 Easy Steps</h2>
+	<h5> Using our service is really easy, and simple.... Here is how to do it!</h5>
+	<dl>
+		<dt>Taking the Picture</dt>
+		  <dd>This step is really easy, First, take a picture of the note with your smartphone device</dd>
+		<dt>Upload</dt>
+		  <dd>Use the upload page to attach the image you took and we will take care of the rest</dd>
+		<dt>Processing</dt>
+		  <dd>Once the image is uploaded, we try really hard to find the text within it and pull it out. After that, keywords are extracted from the note and placed in our database for you to use to search for your note</dd>
+		<dt>All Done!</dt>
+			<dd>That wasn't soo hard, was it? </dd>
+	</dl>
+<div>
