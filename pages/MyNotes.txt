@@ -22,10 +22,10 @@
 	*/
 ?>
 <dl class="tabs" data-tab="">
-  <dd class="active"><a href="#." aria-selected="true" tabindex="0">Tab 1</a></dd>
-  <dd class=""><a href="#." aria-selected="false" tabindex="-1">Tab 2</a></dd>
-  <dd class=""><a href="#." aria-selected="false" tabindex="-1">Tab 3</a></dd>
-  <dd class=""><a href="#." aria-selected="false" tabindex="-1">Tab 4</a></dd>
+  <dd class="active"><a onclick="" aria-selected="true" tabindex="0">Tab 1</a></dd>
+  <dd class=""><a onclick="" aria-selected="false" tabindex="-1">Tab 2</a></dd>
+  <dd class=""><a onclick="" aria-selected="false" tabindex="-1">Tab 3</a></dd>
+  <dd class=""><a onclick="" aria-selected="false" tabindex="-1">Tab 4</a></dd>
 </dl>
 
 
