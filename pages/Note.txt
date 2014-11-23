@@ -21,7 +21,7 @@ $tagsNum = mysql_result(mysql_query("SELECT COUNT(*) FROM `fileTags` WHERE `fid`
 	<h2> Raw Text Output </h2>
 	<div class="large-12 columns">
 			<div class="panel">
-				<pre><?php include('uploads/'.substr($file, 0, -4).'.txt'); ?></pre>
+				<p><?php include('uploads/'.substr($file, 0, -4).'.txt'); ?></p>
 			</div>
 	</div>
 	
