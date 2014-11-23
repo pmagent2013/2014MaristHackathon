@@ -163,8 +163,8 @@ function readImageForText($filename){
 }
 
 function byteFormat($bytes, $unit = "", $decimals = 2) {
-	$units = array('B' => 0, 'KB' => 1, 'MB' => 2, 'GB' => 3, 'TB' => 4, 
-			'PB' => 5, 'EB' => 6, 'ZB' => 7, 'YB' => 8);
+	$units = array('B' => 0, 'KiB' => 1, 'MiB' => 2, 'GiB' => 3, 'TiB' => 4, 
+			'PiB' => 5, 'EiB' => 6, 'ZiB' => 7, 'YiB' => 8);
  
 	$value = 0;
 	if ($bytes > 0) {
