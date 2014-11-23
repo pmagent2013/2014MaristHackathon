@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 $execution_time = microtime();
+session_start();
 date_default_timezone_set("America/New_York");
 
 function databaseConnect($database = "hackathon_db"){
