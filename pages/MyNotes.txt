@@ -10,7 +10,7 @@
 	echo "";
 	foreach($array as $item => $data){
 			echo '<h1> '.$item.' </h1>';
-			foreach($data as $data_inner){
+			foreach($data as $data_outer => $data_inner){
 				print_r($data_inner);
 			}
 			
