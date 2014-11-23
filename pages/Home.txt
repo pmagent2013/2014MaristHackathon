@@ -1,4 +1,4 @@
-<ul class="example-orbit" data-orbit>
+<ul class="data-orbit" data-orbit>
   <li>
     <img src="http://mysimpleinspiration.com/wp-content/uploads/2011/11/notebook.jpg" alt="slide 1" />
     <div class="orbit-caption">
