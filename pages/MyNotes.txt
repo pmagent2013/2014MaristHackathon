@@ -1,5 +1,5 @@
 <?php
-$query = mysql_query("SELECT fid FROM `files`");
+$query = mysql_query("SELECT cid, fid FROM `classFiles` group by cid");
 	while($row = mysql_fetch_array($query)){
 		echo $row['uid']." - ".$row['email'];
 	}
