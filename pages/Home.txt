@@ -12,6 +12,7 @@
 			</div>
 </div>
 </div>
+<hr>
 <div class="row">
 	<h3>How the system works - 4 Easy Steps</h3>
 	<h5> Using our service is really easy, and simple.... Here is how to do it!</h5>
