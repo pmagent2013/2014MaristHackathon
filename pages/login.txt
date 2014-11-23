@@ -121,7 +121,7 @@ body {
 	0% {margin-left: 1000px;}
 	100% {margin-left: -1000px;}
 }
-my-main-div { margin: 0 auto; }
+my-main-div { margin: 0 auto; position: fixed; }
 </style>
 <script>
 document.getElementById("redirect").setAttribute("value",window.location.hash);
