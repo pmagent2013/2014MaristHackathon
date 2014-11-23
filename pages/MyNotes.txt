@@ -7,66 +7,19 @@
 	ksort($array, SORT_DESC);
 
 	$count=0;
-	echo "";
+	echo '<div class="row text-center"><ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">';
 	foreach($array as $item => $data){
 			echo '<h1> '.$item.' </h1>';
 			foreach($data as $data_outer => $data_inner){
-				echo $data_outer." - ".$data_inner;
-			}
-			
-	echo "";
-	
-	}
-	
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="row text-center">
-	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
-	
-<li style="padding:5px;">
-					<a href="#Note&id='.$row['fid'].'">
+				echo '<li style="padding:5px;">
+					<a href="#Note&id='.$data_outer.'">
 						<div class="row text-center">
-							<h3>'.$row['title'].'</h3>
-							<img style="max-width:225px;" src="uploads/'.$row['name'].'">
+							<h3>'.$date().'</h3>
+							<img style="max-width:225px;" src="uploads/'.$data_inner.'">
 						</div>
 					</a>
-				</li>
-				
-</ul>
-</div>
+				</li>';
+			}	
+	}
+	echo "</ul></div>";
+?>
