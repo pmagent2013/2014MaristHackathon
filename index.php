@@ -27,8 +27,7 @@
             <ul class="left">
                 <li><a href="#Home">Home</li>
 				<li><a href="#Upload">Upload Note</li>
-                <li><a href="#MyNotes">My Notes</li>
-				<li><a href="#IdentifyNotes">Uncategorised Notes</li></a>
+                <li><a href="#MyNotes">My Notes</li></a>
                 <li class="has-form hide-for-touch">
                     <input type="text" placeholder="Search For Notes" onkeyup="window.history.pushState('', 'Location', '#Search&query='+ this.value)">
                 </li>
