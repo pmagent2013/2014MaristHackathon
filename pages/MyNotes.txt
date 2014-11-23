@@ -4,15 +4,29 @@
 	while($row = mysql_fetch_array($query)){
 		$array[$row['title']][$row['fid']] = $row['name'];
 	}
-	echo "<pre>";
-	var_dump($array);
 	ksort($array, SORT_DESC);
-	var_dump($array);
-	echo "</pre>";
+
+	$count=0;
+	echo '<dl class="tabs" data-tab="">';
+	foreach($array as $item => $data){
+		if($count = 0){
+			echo '<dd class="active"><a href="" aria-selected="true" tabindex="0">';
+		}else{
+			echo '<dd class=""><a href="#panel2-2" aria-selected="false" tabindex="-1">';
+		
+		}
+	echo "</a></dd>";
+	
+	}
+	
+	
 ?>
-
-
-
+<dl class="tabs" data-tab="">
+  <dd class="active"><a href="" aria-selected="true" tabindex="0">Tab 1</a></dd>
+  <dd class=""><a href="" aria-selected="false" tabindex="-1">Tab 2</a></dd>
+  <dd class=""><a href="" aria-selected="false" tabindex="-1">Tab 3</a></dd>
+  <dd class=""><a href="" aria-selected="false" tabindex="-1">Tab 4</a></dd>
+</dl>
 
 
 
