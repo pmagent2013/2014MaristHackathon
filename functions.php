@@ -8,7 +8,7 @@ if(!$_SESSION['authorized']){
          header('Location: index.php/#login&error=Wrong+Password');
          exit();     
       }
-	  $_SESSION['authorized']']=TRUE;
+	  $_SESSION['authorized']=TRUE;
 	  header('Location: index.php');
 	  exit;
    } else { //
