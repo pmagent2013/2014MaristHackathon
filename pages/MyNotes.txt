@@ -4,9 +4,11 @@
 	while($row = mysql_fetch_array($query)){
 		$array[$row['title']] = array($row['fid'], $row['name']);
 	}
+	echo "<pre>";
 	var_dump($array);
 	ksort($array, SORT_DESC);
 	var_dump($array);
+	echo "</pre>";
 ?>
 
 
