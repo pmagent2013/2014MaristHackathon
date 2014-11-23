@@ -151,6 +151,7 @@ function readImageForText($filename){
 	$params1 = 'url=http://hackathon.gavalchin.com/live/uploads/'.$filename.'&mode=scene_photo&apikey=8e025234-2c19-4af9-b337-40803dfdd176';
 	$response = file_get_contents($url_listindexes .'?'.$params1);
 	$response = getBetween($response, '"text": "', '",');
+	$response_formatted = str_replace('\n', '<br>', $response);
 	$response = str_replace('\n', ' ', $response);
 	$tags = explode(" ", $response);
 	$fid = mysql_result(mysql_query("SELECT `fid` FROM `files` WHERE `uid` = '".$_SESSION['uid']."' ORDER BY `uploadTime` DESC"), 0, 'fid');
@@ -158,7 +159,7 @@ function readImageForText($filename){
 	foreach($tags as $tag){
 		mysql_query("REPLACE INTO `fileTags` (`fid` ,`tag`)VALUES ('".$fid."',  '".$tag."')");
 	}
-	return $response;
+	return $response_formatted;
 }
 
 function byteFormat($bytes, $unit = "", $decimals = 2) {
