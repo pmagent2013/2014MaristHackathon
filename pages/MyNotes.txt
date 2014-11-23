@@ -11,9 +11,7 @@
 	foreach($array as $item => $data){
 			echo '<h1> '.$item.' </h1>';
 			foreach($data as $data_outer => $data_inner){
-				echo "<pre>";
-				print_r($data_outer);
-				echo "</pre>";
+				echo $data_outer." - ".$data_inner;
 			}
 			
 	echo "";
