@@ -15,14 +15,18 @@ function checkURL(hash)
     if(hash == "#" || hash == ""){
     window.history.pushState("", "Location", "#Home");
     }
-    if(hash != lasturl || hash.indexOf('.') != -1)
+    if(hash != lasturl)
     {
 		previous=lasturl;
         lasturl=hash;
         if(hash == ""){
         	$('#pageContent').html(default_content);
         }else{
-          loadPage(hash, previous);
+			if(hash.indexOf('.') >= 0){
+				//do nothing
+			}else{
+			   loadPage(hash, previous);
+			}
         }
     }
 }
