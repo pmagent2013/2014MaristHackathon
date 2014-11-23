@@ -1,7 +1,11 @@
 <p>
 Welcome to the Int-Elligence Note System!
+<br>
 This is a system designed to allow you to upload your class notes.
+<br>
 Using the Upload Note tab you can add a picture of your notes.
+<br>
 If the picture was taking during your class time it will automatically upload to that classes directory.
+<br>
 Using the my notes tab, you can view the notes sorted by class.
 </p>
