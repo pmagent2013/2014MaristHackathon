@@ -8,7 +8,9 @@ $query = mysql_query("SELECT cid, fid FROM `classFiles` group by cid");
 
 
 ?>
-
-<body>
-This is your notes
-</body>
+<ul class="small-block-grid-2 large-block-grid-4">
+  <li><img class="th" src="uploads/Logo_drakejosh.png"></li>
+  <li><img class="th" src="uploads/Logo_drakejosh.png"></li>
+  <li><img class="th" src="uploads/Logo_drakejosh.png"></li>
+  <li><img class="th" src="uploads/Logo_drakejosh.png"></li>
+</ul>
