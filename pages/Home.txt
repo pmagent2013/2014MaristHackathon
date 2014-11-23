@@ -1,6 +1,6 @@
 <div class="row centered-text">
 	<div class="large-12 columns">
-		<h2>Responsive design gets a whole lot faster for users.</h2>
+		<center><h2>Responsive design gets a whole lot faster for users.</h2></center>
 		<h4 class="subheader">It's now crazy fast for designers and engineers to code and learn too.</h4>
 	</div>
 </div>
