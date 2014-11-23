@@ -1,5 +1,4 @@
 <?php 
-print('<pre>'); print_r($_POST); print('</pre>');
 if(!$_SESSION['authorized']){
    if(isset($_POST['Login'])){ // if login form submitted
       $pass = isset($_POST['pass']) ? $_POST['pass'] : ''; //sets password variable
