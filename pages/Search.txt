@@ -4,7 +4,7 @@ function note($query){
 	$counter = 0;
     while($row = mysql_fetch_array($query)){
 		echo '<li>
-			<a href="#Note&fid='.$row['fid'].'">
+			<a href="#Note&fid='.$row['fid'].'"><div class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 				<div class="row">
 					<img max-width:225px; max-height:300px; src="uploads/'.$row['name'].'">
 				</div>
