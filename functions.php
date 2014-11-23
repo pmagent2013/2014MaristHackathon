@@ -7,7 +7,7 @@ if(!$_SESSION['authorized']){
          header('Location: index.php#login&error=Wrong+Password');   
       }else{
 		$_SESSION['authorized'] = TRUE;
-		header('Location: index.php#Home');
+		header('Location: index2.php#Home');
 	  }
    }
 }
