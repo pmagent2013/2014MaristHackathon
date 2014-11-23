@@ -26,6 +26,7 @@
         <section class="top-bar-section">
             <ul class="left">
                 <li><a href="#Home">Home</li>
+				<li><a href="#MyNotes">Upload Note</li>
                 <li><a href="#MyNotes">My Notes</li>
                 <!--<li><a href="#FAQ">F.A.Q.</a></li>
                 <li class="divider">
