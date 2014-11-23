@@ -8,9 +8,8 @@ if(!$_SESSION['authorized']){
 			//header('Location: index.php#login&error=No+Pass');
 	   }
 	   $numRecords = mysql_result(mysql_query("SELECT COUNT(*) FROM `users` WHERE `username` = '".$_POST['login_user']."'"), 0, 'COUNT(*)');
-	   var_dump($numRecords);
-	   if(mysql_result(mysql_query("SELECT COUNT(*) FROM `users` WHERE `username` = '".$_POST['login_user']."'"), 0, 'COUNT(*)') == 0){
-			//header('Location: index.php#login&error=User+Does+Not+Exist');
+	   if($numRecords == "0"){
+			header('Location: index.php#login&error=User+Does+Not+Exist');
 		}
       $pass = $_POST['pass']; //sets password variable
 	  $Password = mysql_result(mysql_query("SELECT `password` FROM `users` WHERE `username` = '".$_POST['login_user']."'"), 0, 'password');
