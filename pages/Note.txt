@@ -8,11 +8,20 @@ $tagsNum = mysql_result(mysql_query("SELECT COUNT(*) FROM `fileTags` WHERE `fid`
 	<ul class="small-block-grid-1 large-block-grid-1">
 		<li><img class="th" style="max-width:60%; max-height:80%;" src="uploads/<?php echo $file; ?>"></li>
 	</ul>
-
+</div>
+<div class="row">
 	<div class="large-6 columns">
-		<div class="panel">
-			<h5>Image Information:</h5>
-			<p>Size: <?php echo byteFormat(filesize('uploads/'.$file), "MBz"); ?><br>Date Uploaded: <?php echo date("F j, Y, g:i a", filemtime('uploads/'.$file)); ?><br>Tags Found: <?php echo $tagsNum ?></p>
-		</div>
+			<div class="panel">
+				<h5>Image Information:</h5>
+				<p>Size: <?php echo byteFormat(filesize('uploads/'.$file), "MBz"); ?><br>Date Uploaded: <?php echo date("F j, Y, g:i a", filemtime('uploads/'.$file)); ?><br>Tags Found: <?php echo $tagsNum ?></p>
+			</div>
 	</div>
 </div>
+<div class="row">
+	<h2> Raw Text Output </h2>
+	<div class="large-12 columns">
+			<div class="panel">
+				<pre><?php include('uploads/'.substr($file, 0, -4).'.txt'); ?></pre>
+			</div>
+	</div>
+	
