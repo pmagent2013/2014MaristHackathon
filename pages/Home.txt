@@ -2,9 +2,9 @@
   <div class="large-12 columns">
     <div class="orbit-container"><ul id="featured1" data-orbit="" data-options="timer_speed:5000;" class="orbit-slides-container" style="height: 280px;">
       <li class="" style="z-index: 2; margin-left: 100%;">
-        <img src="http://mysimpleinspiration.com/wp-content/uploads/2011/11/notebook.jpg">
+        <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg">
         <div class="orbit-caption">
-          Tired of searching through your notes to find something?.... Upload it to INT-Elligent Notes!
+          Caption One. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </div>
       </li>
       <li class="active" style="z-index: 4; margin-left: 0%;">
@@ -19,6 +19,7 @@
           Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </div>
       </li>
-    </ul><a href="#." class="orbit-prev"><span></span></a><a href="#." class="orbit-next"><span></span></a><div class="orbit-timer paused"><span></span><div class="orbit-progress" style="width: 0%;"></div></div><div class="orbit-slide-number"><span>2</span> of <span>3</span></div><div class="orbit-bullets-container"><ol class="orbit-bullets"><li data-orbit-slide="0" class=""></li><li data-orbit-slide="1" class="active"></li><li data-orbit-slide="2" class=""></li></ol></div></div>
+    </ul><a href="#" class="orbit-prev"><span></span></a><a href="#" class="orbit-next"><span></span></a><div class="orbit-timer paused"><span></span><div class="orbit-progress" style="width: 0%;"></div></div><div class="orbit-slide-number"><span>2</span> of <span>3</span></div><div class="orbit-bullets-container"><ol class="orbit-bullets"><li data-orbit-slide="0" class=""></li><li data-orbit-slide="1" class="active"></li><li data-orbit-slide="2" class=""></li></ol></div></div>
   </div>
 </div>
+http://mysimpleinspiration.com/wp-content/uploads/2011/11/notebook.jpg
