@@ -24,7 +24,7 @@ $toSearch = parameter('query');
 ?>
 
 
-<center><h1> Results: </h1></center>
+<center><h1> Results Found Matching: <?php echo $toSearch; ?></h1></center>
 <div class="row text-center">
 		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 			<?php note($toSearch); ?>
