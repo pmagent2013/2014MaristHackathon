@@ -1,10 +1,10 @@
 <?php
 if(!$_SESSION['authorized']){
    if(isset($_POST['Login'])){ // if login form submitted
-	   if($_POST['login_user'] == ""){
+	   if($_POST['login_user'] === ""){
 			header('Location: index.php#login&error=No+User+Given');
 	   }
-	   if($_POST['pass'] == ""){
+	   if($_POST['pass'] === ""){
 			header('Location: index.php#login&error=No+Pass');
 	   }
       $pass = $_POST['pass']; //sets password variable
