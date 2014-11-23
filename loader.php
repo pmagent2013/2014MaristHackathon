@@ -25,7 +25,7 @@ if(($_SESSION['authorized'] == TRUE)){
 		}
 	}else{
 		//force login page
-			include('pages/create.txt');
+			include('pages/login.txt');
 	}
 }
 
