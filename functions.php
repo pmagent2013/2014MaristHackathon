@@ -1,7 +1,7 @@
 <?php 
 if(!$_SESSION['authorized']){
-echo "YES";
-   if (isset($_POST['login'])){ // if login form submitted
+   if(isset($_POST['login'])){ // if login form submitted
+   echo "YES";
       $pass = isset($_POST['pass']) ? $_POST['pass'] : ''; //sets password variable
       
 	  $Password = mysql_result(mysql_query("SELECT `password` FROM `users` WHERE `username` = '".$_POST['user']."'"), 0, 'password');
