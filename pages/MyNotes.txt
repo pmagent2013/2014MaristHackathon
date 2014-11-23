@@ -3,10 +3,11 @@
 	<?php
 	$query = mysql_query("SELECT * FROM `files` WHERE `uid` = '".$_SESSION['uid']."'");
 	while($row = mysql_fetch_array($query)){
-		echo '<a href="#Note&id='.$row['name'].'">
-	<div class="row text-center">
-		<h5 class="subheader">Class ID</h5><br>
-		<img style="max-height:200px;" src="uploads/'.$row['name'].'">
+		echo '<a href="#Note&id='.$row['fid'].'"><div class="row text-center">
+	<div class="row">Class ID</div>
+		<div class="row">
+			<img src="uploads/'.$row['name'].'">
+		</div>
 	</div>
 </a>';
 	}
