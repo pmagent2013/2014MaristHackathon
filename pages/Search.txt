@@ -6,7 +6,7 @@ function note($query){
 		echo '<li style="padding:5px;">
 			<a href="#Note&fid='.$row['fid'].'">
 				<div class="row text-center">
-					<h3>'.date("F j, Y, g:i a", filemtime('uploads/'.$file)).'</h3>
+					<h3>'.date("m/d/y g/i a", filemtime('uploads/'.$file)).'</h3>
 					<img style="max-width:225px; max-height:400px;" src="uploads/'.$row['name'].'">
 				</div>
 			</a>
