@@ -15,6 +15,7 @@ if(!$_SESSION['authorized']){
 	  $Password = mysql_result(mysql_query("SELECT `password` FROM `users` WHERE `username` = '".$_POST['login_user']."'"), 0, 'password');
 		  if ($pass === $Password) { //error, wrong password
 			$_SESSION['authorized'] = TRUE;
+			$_SESSION['uid'] = mysql_result(mysql_query("SELECT uid FROM `users` WHERE `username` = '".$_POST['login_user']."'"), 0, 'uid');
 			header('Location: index.php#Home');
 		  }else{ 
 			header('Location: index.php#login&error=Wrong+Password+or+Username');
