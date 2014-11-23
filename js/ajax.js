@@ -22,7 +22,11 @@ function checkURL(hash)
         if(hash == ""){
         	$('#pageContent').html(default_content);
         }else{
-          loadPage(hash, previous);
+			if(hash.indexOf('.') >= 0){
+				//do nothing
+			}else{
+			   loadPage(hash, previous);
+			}
         }
     }
 }
