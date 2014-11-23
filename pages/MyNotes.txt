@@ -1,16 +1,18 @@
-<div class="container">
-	<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+<div class="row text-center">
+	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 	<?php
 	$query = mysql_query("SELECT * FROM `files` WHERE `uid` = '".$_SESSION['uid']."'");
 	while($row = mysql_fetch_array($query)){
-		echo '<a href="#Note&id='.$row['fid'].'"><div class="row text-center" style="max-width: 225px;">
-	<div class="row">Class ID</div>
-		<div class="row">
-			<img style="max-height: 100px;" src="uploads/'.$row['name'].'">
-		</div>
-	</div>
-</a>';
+		echo '<li style="padding:5px;">
+					<a href="#Note&id='.$row['fid'].'">
+						<div class="row text-center">
+							<h3> Class ID</h3>
+							<img style="max-height:300px;" src="uploads/'.$row['name'].'">
+						</div>
+					</a>
+				</li>';
 	}
 ?>
 	</ul>
 </div>
+
