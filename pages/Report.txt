@@ -1,6 +1,6 @@
 <div style="">
 	<div class="row">
-		<form method="POST" action="index.php#Report">
+		<form method="POST" action="index.php#Home">
 			<div class="row text-center">
 				<h1>Report Center</h1>
 			</div>
