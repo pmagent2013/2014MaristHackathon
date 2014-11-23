@@ -1,11 +1,9 @@
 <div class="row"><h2><center>Welcome Int-Elligence, the future of Notetaking!</center></h2></div>
 <div class="row">
 	<ul class="small-block-grid-1 large-block-grid-1">
-		<li><img class="th" style="max-width:80%; max-height:80%;" src="http://i.imgur.com/wOr3i4d.jpg"></li>
+		<li><img class="th" style="width: 100%;" src="http://i.imgur.com/wOr3i4d.jpg"></li>
 	</ul>
 </div>
-http://i.imgur.com/wOr3i4d.jpg
-
 <div class="row">
 <div class="large-12 columns">
 			<div class="panel">
