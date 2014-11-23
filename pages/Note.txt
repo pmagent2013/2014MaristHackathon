@@ -7,6 +7,6 @@
   <li><img class="th" style="max-width:60%; max-height:80%;" src="uploads/<?php echo $file; ?>"></li>
   <div class="panel">
       <h5>Image Information:</h5>
-      <p>File Size: <?php echo filesize('uploads/'.$file); ?></p>
+      <p>File Size: <?php echo filesize2bytes('uploads/'.$file); ?></p>
     </div>
 </ul>
