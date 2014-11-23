@@ -154,10 +154,12 @@ function readImageForText($filename){
 	$response = str_replace('\n', ' ', $response);
 	$tags = explode(" ", $response);
 	$fid = mysql_result(mysql_query("SELECT fid FROM `files` WHERE `uid` = '".$_SESSION['uid']."' SORT BY `uploadTime` ASC LIMTI 1"), 0, 'fid');
+	$the = "";
 	foreach($tags as $tag){
 		mysql_query("INSERT INTO `fileTags` (`fid` ,`tag`)VALUES ('".$fid."',  '".$tag."')");
+		$the .= $tag.", ";
 	}
-	return $response;
+	return $the;
 }
 
 
