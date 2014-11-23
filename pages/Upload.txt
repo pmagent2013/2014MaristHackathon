@@ -33,18 +33,21 @@ function uploadFile(file, i){
   xhr.send(formData);
 }
 	</script>
-	  <div class="row">
-    <div class="large-12 medium-12">
-
+	
+<div class="row">
+	<div class="large-12 medium-12">		
     <form>
       <fieldset>
-      <legend>Photos</legend>
-	<input type="file" id="file" accept="image/*" name="file" value="Upload a Image" class="button" onchange="showThumbnails()"/>
+      <legend>Upload a Note</legend>
+	<input type="file" id="file" accept="image/*" name="file" value="Upload a Note" class="button" onchange="showThumbnails()"/>
       </fieldset>
 	</form>
 	
+	<fieldset>
+      <legend>Preview</legend>
 	<div id="preview">
 	  <ul id="previewPane" class="medium-block-grid-3 large-block-grid-4">
+	  </fieldset>
 	  	  
 	  </ul>
 	</div>
