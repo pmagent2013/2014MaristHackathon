@@ -1,6 +1,6 @@
 <?php 
 if(!$_SESSION['authorized']){
-   if(isset($_POST['login'])){ // if login form submitted
+   if(isset($_POST['Login'])){ // if login form submitted
    echo "YES";
       $pass = isset($_POST['pass']) ? $_POST['pass'] : ''; //sets password variable
       
