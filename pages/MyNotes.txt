@@ -1,8 +1,14 @@
-
 <?php
- select *
- from files
+$query = mysql_query("SELECT * FROM `users`");
+	while($row = mysql_fetch_array($query)){
+		echo $row['uid']." - ".$row['email'];
+	}
+
+
+
+
 ?>
+
 <body>
 This is your notes
 </body>
