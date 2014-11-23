@@ -1,5 +1,5 @@
-<div class="row">
-	<ul class="small-block-grid-2 large-block-grid-4">
+<div class="container">
+	<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
 	<?php
 	$query = mysql_query("SELECT * FROM `files` WHERE `uid` = '".$_SESSION['uid']."'");
 	while($row = mysql_fetch_array($query)){
