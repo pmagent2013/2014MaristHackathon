@@ -1,11 +1,12 @@
+<?php $file = mysql_result(mysql_query("SELECT `name` FROM `files` WHERE `uid` = '".$_SESSION['uid']."' AND `fid` = '".$_POST['fid']."' "), 0, 'name'); ?>
 <div class="row">
 <h2> Note Details... </h2>
 </div>
 <div class="row">
 <ul class="small-block-grid-1 large-block-grid-1">
-  <li><img class="th" style="max-width:60%; max-height:80%;" src="uploads/<?php echo mysql_result(mysql_query("SELECT `name` FROM `files` WHERE `uid` = '".$_SESSION['uid']."' AND `fid` = '".$_POST['fid']."' "), 0, 'name'); ?>"></li>
+  <li><img class="th" style="max-width:60%; max-height:80%;" src="uploads/<?php echo $file; ?>"></li>
   <div class="panel">
       <h5>Image Information:</h5>
-      <p></p>
+      <p>File Size: <?php echo filesize('uploads/'.$file); ?></p>
     </div>
 </ul>
