@@ -1,8 +1,8 @@
 <div class="row">
 <?php
-$query = mysql_query("SELECT * FROM `classFiles` ");
+$query = mysql_query("SELECT * FROM `files` WHERE `uid` = '".$_SESSION['uid']."'");
 	while($row = mysql_fetch_array($query)){
-		echo $row['uid']." - ".$row['email'];
+		echo $row['uid']." - ".$row['name'];
 	}
 ?>
 </div>
