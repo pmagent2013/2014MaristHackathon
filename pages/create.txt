@@ -24,7 +24,8 @@
 ?>
 					
 <div class="row">
-  <form name="SignUp" data-abide novalidate="novalidate" method="POST" action="index.php#create">
+<?php if (isset($_POST['status'])){echo '<div data-alert class="alert-box alert">Sorry, Registrations are Disabled!<a href="#" class="close">&times;</a></div>';}?>
+  <form name="SignUp" data-abide novalidate="novalidate" method="POST" action="index.php#create&satus=-1">
     <fieldset>
       <legend>Account Details</legend>
       <div class="row">
