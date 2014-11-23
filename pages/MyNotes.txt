@@ -12,6 +12,7 @@
 			echo '<h1> '.$item.' </h1>';
 			foreach($data as $data_outer => $data_inner){
 				echo "<pre>";
+				print_r($data_outer);
 				print_r($data_inner);
 				echo "</pre>";
 			}
