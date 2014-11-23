@@ -3,7 +3,7 @@ function note($query){
 	$query = mysql_query("SELECT DISTINCT name, tag, fid FROM files, fileTags WHERE tag LIKE '%$query%' AND files.fid = fileTags.fid AND uid = '".$_SESSION['uid']."' GROUP BY name LIMIT 100");
 	$counter = 0;
     while($row = mysql_fetch_array($query)){
-		echo '<li>
+		echo '<li style="padding:5px;">
 			<a href="#Note&fid='.$row['fid'].'"><div class="row text-center">
 				<div class="row">
 					<img src="uploads/'.$row['name'].'">
