@@ -12,6 +12,7 @@
    <script src="js/ajax.js"></script>
    </head>
    <body>
+  <?php if(($_SESSION['authorized'] == TRUE)){ ?>
  <nav class="top-bar" data-topbar>
         <ul class="title-area">
             <li class="name">
@@ -48,6 +49,7 @@
             </ul>
         </section>
     </nav>
+	<? } ?>
 <div id="pageContent">
     <noscript>
         <center>
