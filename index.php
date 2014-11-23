@@ -15,7 +15,8 @@
  <nav class="top-bar" data-topbar>
         <ul class="title-area">
             <li class="name">
-                <h1><a href="#Home"><img style="max-height: 45px;" src="http://i.imgur.com/ClEnz1J.png"></a></h1>
+                <h1><a href="#Home"><img style="max-height: 45px;" src="http://i.imgur.com/FzMILs3.png"></a></h1>
+				<!-- alt logohttp://i.imgur.com/ClEnz1J.png -->
             </li>
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
