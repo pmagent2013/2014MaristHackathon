@@ -7,6 +7,9 @@ if(!$_SESSION['authorized']){
 	   if($_POST['pass'] !== ""){
 			header('Location: index.php#login&error=No+Pass');
 	   }
+	   if(mysql_result(mysql_query("SELECT COUNT(*) FROM `users` WHERE `username` = '".$_POST['login_user']."'"), 0, 'count(*)') != 1){
+			header('Location: index.php#login&error=User+Does+Not+Exist');
+		}
       $pass = $_POST['pass']; //sets password variable
 	  $Password = mysql_result(mysql_query("SELECT `password` FROM `users` WHERE `username` = '".$_POST['login_user']."'"), 0, 'password');
 		  if ($pass != $Password) { //error, wrong password
