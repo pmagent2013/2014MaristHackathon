@@ -1,9 +1,5 @@
 <?php 
-if(!$_SESSION['logged_in']){
-   if(mysql_result(mysql_query("SELECT `password` FROM `sites` WHERE `realm` = '".$realm."'"), 0, 'password') == ""){
-	   setPass();
-	   exit();
-   }
+if(!$_SESSION['authorized']){
    if (isset($_POST['Log In'])){ // if login form submitted
       $pass = isset($_POST['pass']) ? $_POST['pass'] : ''; //sets password variable
       
@@ -12,7 +8,7 @@ if(!$_SESSION['logged_in']){
          header('Location: index.php/#login&error=Wrong+Password');
          exit();     
       }
-	  $_SESSION['authorized']=TRUE;
+	  $_SESSION['authorized']']=TRUE;
 	  header('Location: index.php');
 	  exit;
    } else { //
