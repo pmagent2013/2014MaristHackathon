@@ -6,7 +6,6 @@ $(document).ready(function(){
             checkURL(this.hash);
     });
     default_content = $('#pageContent').html();
-    setInterval("keepSessionAlive()",60000);
     setInterval("checkURL()",250);
 });
 var lasturl="";
@@ -46,25 +45,4 @@ function loadPage(url, previous){
         
     });
 
-}
-
-function keepSessionAlive(){
-	if(sessionLength <= 720){
-		$.ajax({
-			type: "POST",
-			url: "common.php",
-			dataType: "html",
-			success: function(msg){
-				if(parseInt(msg)!=0)
-				{
-					// all good here! :D
-	
-				}
-				
-			}
-			
-		});
-	}else{
-		// its been 12 hours, we're going to let the session die on its own
-	}
 }
