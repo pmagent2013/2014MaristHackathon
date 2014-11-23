@@ -10,6 +10,10 @@
 	echo "";
 	foreach($array as $item => $data){
 			echo '<h1> '.$item.' </h1>';
+			print_r($data);
+			foreach($data as $data_inner){
+			
+			}
 			
 	echo "";
 	
