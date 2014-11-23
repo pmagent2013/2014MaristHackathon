@@ -15,7 +15,7 @@ function checkURL(hash)
     if(hash == "#" || hash == ""){
     window.history.pushState("", "Location", "#Home");
     }
-    if(hash != lasturl || hash.indexOf('.') = -1)
+    if(hash != lasturl || hash.indexOf('.') = 1)
     {
 		previous=lasturl;
         lasturl=hash;
