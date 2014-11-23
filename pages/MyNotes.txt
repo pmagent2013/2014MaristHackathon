@@ -1,1 +1,5 @@
 This is your notes
+<script>
+select *
+from users
+</script>
