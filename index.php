@@ -1,5 +1,5 @@
 <?php include_once('common.php'); 
-print('<pre>'); print_r($_POST); print('</pre>');
+print('<pre>'); var_dump($_POST); print('</pre>');
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
