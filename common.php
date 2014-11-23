@@ -154,12 +154,10 @@ function readImageForText($filename){
 	$response = str_replace('\n', ' ', $response);
 	$tags = explode(" ", $response);
 	$fid = mysql_result(mysql_query("SELECT `fid` FROM `files` WHERE `uid` = '".$_SESSION['uid']."' ORDER BY `uploadTime` DESC"), 0, 'fid');
-	$the = "";
 	foreach($tags as $tag){
 		mysql_query("REPLACE INTO `fileTags` (`fid` ,`tag`)VALUES ('".$fid."',  '".$tag."')");
-		$the .= $tag."(".$fid."), ";
 	}
-	return $the;
+	return $response;
 }
 
 
