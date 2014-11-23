@@ -1,10 +1,14 @@
-
 <div class="row">
 	<ul class="small-block-grid-2 large-block-grid-4">
 	<?php
 	$query = mysql_query("SELECT * FROM `files` WHERE `uid` = '".$_SESSION['uid']."'");
 	while($row = mysql_fetch_array($query)){
-		echo '<li><img class="th" src="uploads/'.$row['name'].'"></li>';
+		echo '<a href="#Note&id='.$row['name'].'">
+	<div class="row text-center">
+		<h5 class="subheader">Class ID</h5><br>
+		<img style="max-height:200px;" src="uploads/'.$row['name'].'">
+	</div>
+</a>';
 	}
 ?>
 	</ul>
