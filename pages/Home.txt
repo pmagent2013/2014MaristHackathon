@@ -1,1 +1,5 @@
+<style>
+background: #c9dbe9;
+
+</style>
 Welcome to the Int-Elligence Note System!
