@@ -22,9 +22,7 @@
 		<dt>Take the Picture</dt>
 		  <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This step is really easy, First, take a picture of the note with your smartphone device. Try and make it so you can only see the page itself in the viewfinder. While our system can differentiate the difference between the page and say, a table, it works best if only the text can be seen</dd>
 		<dt>Upload</dt>
-		  <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the upload page to attach the image you took and we will take care of the rest</dd>
-		<dt>Processing</dt>
-		  <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once the image is uploaded, we try really hard to find the text within it and pull it out. After that, keywords are extracted from the note and placed in our database for you to use to search for your note</dd>
+		  <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the upload page to attach the image you took and we will take care of the rest. Once the image is uploaded, we try really hard to find the text within it and pull it out. After that, keywords are extracted from the note and placed in our database for you to use to search for your note</dd>
 		<dt>All Done!</dt>
 			<dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That wasn't soo hard, was it? </dd>
 	</dl>
