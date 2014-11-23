@@ -145,13 +145,18 @@ function getBetween($content=NULL,$start=NULL,$end=NULL){
     return 'Not Found';
 }
 
-
 function readImageForText($filename){
+	mysql_query("INSERT INTO `files` (`uid`, `name`) VALUES ('".$_SESSION['uid']."', '".$filename."')");
 	$url_listindexes = 'https://api.idolondemand.com/1/api/sync/ocrdocument/v1';
 	$params1 = 'url=http://hackathon.gavalchin.com/live/uploads/'.$filename.'&mode=scene_photo&apikey=8e025234-2c19-4af9-b337-40803dfdd176';
 	$response = file_get_contents($url_listindexes .'?'.$params1);
 	$response = getBetween($response, '"text": "', '",');
 	$response = str_replace('\n', ' ', $response);
+	$tags = explode(" ", $response);
+	$fid = mysql_result(mysql_query("SELECT fid FROM `files` WHERE `uid` = '".$_SESSION['uid']."' SORT BY `uploadTime` ASC LIMTI 1"), 0, 'fid');
+	foreach($tags as $tag){
+		mysql_query("INSERT INTO `fileTags` (`fid` ,`tag`)VALUES ('".$fid."',  '".$tag."')");
+	}
 	return $response;
 }
 
