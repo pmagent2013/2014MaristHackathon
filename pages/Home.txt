@@ -1,9 +1,11 @@
-<h2>Welcome Int-Elligence, the future of notetaking!</h2>
+<div class="row"><h2>Welcome Int-Elligence, the future of notetaking!</h2></div>
+<div class="row">
 <div class="large-12 columns">
 			<div class="panel">
 				<h2>Int-Elligent Notes system for Marist College Students</h2>
 				<p>This system is intended to allow easy accessibility and storage of notes. We use the advanced API named 'IDOL OnDemand' to process the content pushed to our service. </p>
 			</div>
+</div>
 </div>
 <div class="row">
 	<h2>How the system works - 4 Easy Steps</h2>
@@ -16,6 +18,6 @@
 		<dt>Processing</dt>
 		  <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once the image is uploaded, we try really hard to find the text within it and pull it out. After that, keywords are extracted from the note and placed in our database for you to use to search for your note</dd>
 		<dt>All Done!</dt>
-			<dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That wasn't soo hard, was it? </dd>
+			<dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That wasn't soo hard, was it? </dd>
 	</dl>
 <div>
