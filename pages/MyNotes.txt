@@ -20,7 +20,7 @@
 					</a>
 				</li>';
 			}
-		echo "<hr></ul></div>";
+		echo "<hr></ul>";
 	}
-	echo "</ul></div>";
+	echo "</div>";
 ?>
