@@ -3,10 +3,14 @@
 <h2> Note Details... </h2>
 </div>
 <div class="row">
-<ul class="small-block-grid-1 large-block-grid-1">
-  <li><img class="th" style="max-width:60%; max-height:80%;" src="uploads/<?php echo $file; ?>"></li>
-  <div class="panel">
-      <h5>Image Information:</h5>
-      <p>File Size: <?php echo byteFormat(filesize('uploads/'.$file), "MB"); ?></p>
-    </div>
-</ul>
+	<ul class="small-block-grid-1 large-block-grid-1">
+		<li><img class="th" style="max-width:60%; max-height:80%;" src="uploads/<?php echo $file; ?>"></li>
+	</ul>
+
+	<div class="large-6 columns">
+		<div class="panel">
+			<h5>Image Information:</h5>
+			<p>File Size: <?php echo byteFormat(filesize('uploads/'.$file), "MBz"); ?></p>
+		</div>
+	</div>
+</div>
