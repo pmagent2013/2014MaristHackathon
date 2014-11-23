@@ -125,7 +125,7 @@ body {
 <script>
 document.getElementById("redirect").setAttribute("value",window.location.hash);
 </script>
-  <div style="vertical-align:middle; margin: 0 auto; position: fixed; left:38%; top:10%; z-index:9999">
+  <div style="vertical-align:middle; margin: 0 auto; position: fixed; left:38%; top:5%; z-index:9999">
     <div class="row">
      <?php if (isset($_POST['error'])){echo '<div data-alert class="alert-box alert">Invalid Username or Password error: ' . $_POST['error'] . '<a href="#" class="close">&times;</a></div>';}?>
       <div class="small-12 columns text-center">
