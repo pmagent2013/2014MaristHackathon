@@ -3,12 +3,12 @@ function note($query){
 	$query = mysql_query("SELECT DISTINCT files.name, fileTags.tag, files.fid FROM files, fileTags WHERE tag LIKE '%$query%' AND files.fid = fileTags.fid AND uid = '".$_SESSION['uid']."' GROUP BY name LIMIT 100");
 	$counter = 0;
     while($row = mysql_fetch_array($query)){
-		echo '<li>
-			<a href="#Note&fid='.$row['fid'].'"><div class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
-				<div class="row">
+		echo '<li style="padding:5px;">
+			<a href="#Note&fid='.$row['fid'].'">
+				<div class="row text-center">
+					<h3></h3>
 					<img max-width:200px; max-height:225px; src="uploads/'.$row['name'].'">
 				</div>
-			</div>
 			</a>
 		</li>';
 			$counter++;
@@ -25,10 +25,8 @@ $toSearch = parameter('query');
 
 
 <center><h1> Results: </h1></center>
-<div class="row">
-	<div id="container">
-		<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3">
+<div class="row text-center">
+		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 			<?php note($toSearch); ?>
 		</ul>
-	</div>
 </div>
