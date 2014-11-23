@@ -55,7 +55,6 @@ function uploadFile(file, i){
  
 }
 	</script>
-	
 	  <div class="row">
     <div class="large-12 medium-12">
 
