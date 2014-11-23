@@ -28,14 +28,14 @@
                 <li><a href="#Home">Home</li>
 				<li><a href="#Upload">Upload Note</li>
                 <li><a href="#MyNotes">My Notes</li>
+				<li><a href="#IdentifyNotes">Uncategorised Notes</li>
+                <li class="has-form hide-for-touch">
+                    <input type="text" placeholder="Search For Notes" onkeyup="window.history.pushState('', 'Location', '#Search&query='+ this.value)">
+                </li>
                 <!--<li><a href="#FAQ">F.A.Q.</a></li>
                 <li class="divider">
                 <li><a href="#About">About Us</a></li>
                 <li class="divider">-->
-                <li><a href="#IdentifyNotes">Uncategorised Notes</li>
-                <li class="has-form hide-for-touch">
-                    <input type="text" placeholder="Search For Notes" onkeyup="window.history.pushState('', 'Location', '#Search&query='+ this.value)">
-              </li>
             </ul>
             <ul class="right">
                     <!--<li class="active"><a href="#ServerStatus">7/7 Online</a></li>-->
