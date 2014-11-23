@@ -33,8 +33,6 @@
                 <li><a href="#About">About Us</a></li>
                 <li class="divider">-->
                 <li><a href="#IdentifyNotes">Uncategorised Notes</li>
-				</ul>
-				<ul class="left">
                 <li class="has-form hide-for-touch">
                     <input type="text" placeholder="Search For Notes" onkeyup="window.history.pushState('', 'Location', '#Search&query='+ this.value)">
               </li>
