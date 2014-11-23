@@ -14,7 +14,7 @@
 				echo '<li style="padding:5px;">
 					<a href="#Note&id='.$data_outer.'">
 						<div class="row text-center">
-							<h3>'.$date().'</h3>
+							<h3>'.date().'</h3>
 							<img style="max-width:225px;" src="uploads/'.$data_inner.'">
 						</div>
 					</a>
