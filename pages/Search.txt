@@ -1,0 +1,34 @@
+<?php
+function note($query){
+	$query = mysql_query("SELECT DISTINCT * FROM files, fileTags WHERE fileTags.fid LIKE '%$query%' AND files.fid = fileTags.fid LIMIT 100");
+	$counter = 0;
+    while($row = mysql_fetch_array($query)){
+		echo '<li>
+			<a href="#Note&fid='.$row['fid'].'"><div class="row text-center">
+				<div class="row">
+					<img src="uploads/'.$row['name'].'">
+				</div>
+			</div>
+			</a>
+		</li>';
+			$counter++;
+    }
+	if($counter == 0){
+		echo "</ul></div><hr><center><font color='red'>We found no results.</font><hr>";
+	}elseif($counter == 100){
+		echo "</ul></div><hr><center><font color='red'>Limited to 100 results... Be more specific.</font><center><hr>";
+	}
+}
+
+$toSearch = parameter('query');	
+?>
+
+
+<center><h1> Results: </h1></center>
+<div class="row">
+	<div id="container">
+		<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+			<?php note($toSearch); ?>
+		</ul>
+	</div>
+</div>
