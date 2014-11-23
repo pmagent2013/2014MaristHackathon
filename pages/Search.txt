@@ -4,7 +4,7 @@ function note($query){
 	$counter = 0;
     while($row = mysql_fetch_array($query)){
 		echo '<li>
-			<a href="#Note&fid='.$row['fid'].'"><div class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+			<a href="#Note&fid='.$row['fid'].'">
 				<div class="row">
 					<img max-width:225px; max-height:300px; src="uploads/'.$row['name'].'">
 				</div>
@@ -27,7 +27,7 @@ $toSearch = parameter('query');
 <center><h1> Results: </h1></center>
 <div class="row">
 	<div id="container">
-		<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+		<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3">
 			<?php note($toSearch); ?>
 		</ul>
 	</div>
