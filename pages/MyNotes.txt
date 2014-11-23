@@ -2,7 +2,7 @@
 	$query = mysql_query("SELECT *FROM classes, classFiles, files WHERE files.fid = classFiles.fid AND classFiles.cid = classes.cid AND files.uid = '".$_SESSION['uid']."'");
 	$array = array();
 	while($row = mysql_fetch_array($query)){
-		$array[$row['title']] = array($row['fid'], $row['name']);
+		$array[$row['title']][$row['fid']] = $row['name'];
 	}
 	echo "<pre>";
 	var_dump($array);
