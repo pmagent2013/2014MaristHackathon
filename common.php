@@ -153,7 +153,7 @@ function readImageForText($filename){
 	$response = getBetween($response, '"text": "', '",');
 	$response = str_replace('\n', ' ', $response);
 	$tags = explode(" ", $response);
-	$fid = mysql_result(mysql_query("SELECT fid FROM `files` WHERE `uid` = '".$_SESSION['uid']."' SORT BY `uploadTime` ASC LIMTI 1"), 0, 'fid');
+	$fid = mysql_result(mysql_query("SELECT `fid` FROM `files` WHERE `uid` = '".$_SESSION['uid']."' ORDER BY `uploadTime` DESC"), 0, 'fid');
 	$the = "";
 	foreach($tags as $tag){
 		mysql_query("REPLACE INTO `fileTags` (`fid` ,`tag`)VALUES ('".$fid."',  '".$tag."')");
