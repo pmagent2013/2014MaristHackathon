@@ -5,7 +5,8 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="shortcut icon" href="http://i.imgur.com/tmPBpgx.png" type="image/png">
+    <link rel="icon" href="http://i.imgur.com/tmPBpgx.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Int-Elligence</title>
     <link rel="stylesheet" href="css/foundation.css" />
