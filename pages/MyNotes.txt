@@ -1,22 +1,64 @@
+	<?php
+	$query = mysql_query("SELECT *FROM classes, classFiles, files WHERE files.fid = classFiles.fid AND classFiles.cid = classes.cid AND files.uid = '".$_SESSION['uid']."'");
+	$array = array();
+	while($row = mysql_fetch_array($query)){
+		$array[$row['title']] = array($row['fid'], $row['name']);
+	}
+	var_dump($array);
+	ksort($array, SORT_DESC);
+	var_dump($array);
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="row text-center">
 	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
-	<?php
-	$query = mysql_query("
-	SELECT *
-	FROM classes, classFiles, files 
-	WHERE files.fid = classFiles.fid 
-	AND classFiles.cid = classes.cid 
-	AND files.uid = '".$_SESSION['uid']."'");
-	while($row = mysql_fetch_array($query)){
-		echo '<li style="padding:5px;">
+	
+<li style="padding:5px;">
 					<a href="#Note&id='.$row['fid'].'">
 						<div class="row text-center">
 							<h3>'.$row['title'].'</h3>
 							<img style="max-width:225px;" src="uploads/'.$row['name'].'">
 						</div>
 					</a>
-				</li>';
-	}
-?>
-	</ul>
+				</li>
+				
+</ul>
 </div>
