@@ -28,10 +28,10 @@
                 <li><a href="#Home">Home</li>
 				<li><a href="#Upload">Upload Note</li>
                 <li><a href="#MyNotes">My Notes</li>
-				<li class="has-form hide-for-touch">
+				<li><a href="#IdentifyNotes">Uncategorised Notes</li></a>
+                <li class="has-form hide-for-touch">
                     <input type="text" placeholder="Search For Notes" onkeyup="window.history.pushState('', 'Location', '#Search&query='+ this.value)">
                 </li>
-				<li><a href="#IdentifyNotes">Uncategorised Notes</li>
                 <!--<li><a href="#FAQ">F.A.Q.</a></li>
                 <li class="divider">
                 <li><a href="#About">About Us</a></li>
