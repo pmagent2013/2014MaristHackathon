@@ -6,12 +6,13 @@ if(!$_SESSION['authorized']){
 	  $Password = mysql_result(mysql_query("SELECT `password` FROM `users` WHERE `username` = '".$_POST['login_user']."'"), 0, 'password');
 	  if($_POST['login_user'] == ""){
 		header('Location: index.php#login&error=No+User+Given');
-	  }
-      if ($pass != $Password) { //error, wrong password
-         header('Location: index.php#login&error=Wrong+Password+or+Username');   
-      }else{
-		$_SESSION['authorized'] = TRUE;
-		header('Location: index.php#Home');
+	  }else{
+		  if ($pass != $Password) { //error, wrong password
+			 header('Location: index.php#login&error=Wrong+Password+or+Username');   
+		  }else{
+			$_SESSION['authorized'] = TRUE;
+			//header('Location: index.php#Home');
+		  }
 	  }
    }
 }
