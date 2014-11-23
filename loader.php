@@ -4,7 +4,6 @@ $mtime = explode(" ",$mtime);
 $mtime = $mtime[1] + $mtime[0]; 
 $starttime = $mtime;
 include_once('common.php');
-session_start();
 
     //die("<center><h1>Scheduled Maintenance. We are working to improve our backend!</h1></center>");
 if(!parameter('page')) die("Error: page id not specified...Something Broke");
@@ -20,8 +19,8 @@ if(($_SESSION['authorized'] == TRUE)){
 	//not logged in
 	if($page == "login" || $page == "create"){
 		//allow other pages while not logged in
-		if(file_exists('pages/'.$page.'.php')){
-			include('pages/'.$page.'.php');
+		if(file_exists('pages/'.$page.'.txt')){
+			include('pages/'.$page.'.txt');
 		}
 	}else{
 		//force login page
