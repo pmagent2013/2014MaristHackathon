@@ -12,7 +12,7 @@
 			echo '<h1> '.$item.' </h1><ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">';
 			foreach($data as $data_outer => $data_inner){
 				echo '<li style="padding:5px;">
-					<a href="#Note&id='.$data_outer.'">
+					<a href="#Note&fid='.$data_outer.'">
 						<div class="row text-center">
 							<h3></h3>
 							<img style="max-width:225px; max-height:300px;" src="uploads/'.$data_inner.'">

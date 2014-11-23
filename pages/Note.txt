@@ -1,0 +1,11 @@
+<div class="row">
+<ul class="small-block-grid-1 large-block-grid-1">
+  <li><img class="th" src="uploads/<?php echo mysql_result(mysql_query("SELECT `name` FROM `files` WHERE `uid` = '".$_SESSION['uid']."' AND `fid` = '".$_POST['fid']."'  ORDER BY `uploadTime` DESC"), 0, 'name'); ?>"></li>
+</ul>
+<div class="large-6 columns">
+    <div class="panel">
+      <h5>This is a regular panel.</h5>
+      <p>It has an easy to override visual style, and is appropriately subdued.</p>
+    </div>
+  </div>
+</div>
