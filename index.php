@@ -40,7 +40,6 @@
             </ul>
             <ul class="right">
                     <!--<li class="active"><a href="#ServerStatus">7/7 Online</a></li>-->
-				<li><a href="#Statistics">Statistics</a></li>
                 <li class=""><a href="#Report">Report An Issue</li>
                 <li class="has-dropdown not-click">My Account</a>
                     <ul class="dropdown">
