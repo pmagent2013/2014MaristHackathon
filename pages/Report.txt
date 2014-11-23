@@ -1,0 +1,15 @@
+<div style="">
+	<div class="row">
+		<form method="POST" action="index.php#Report">
+			<div class="row text-center">
+				<h1>Report Center</h1>
+			</div>
+			<div class="row">
+				<textarea cols="10" rows="10" name="report_info" placeholder="Put Report in Here"></textarea>
+			</div>
+			<div class="row">
+				<input type="submit" class="button small radius" value="Submit Report">
+			</div>
+		</form>
+	</div>
+</div>
